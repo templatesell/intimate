@@ -24,7 +24,7 @@ if ( ! function_exists( 'intimate_posted_on' ) ) :
 	);
 
 	$posted_on = 
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark"> <i class="fa fa-clock-o"></i>' . $time_string . '</a>';
 
 	$byline = sprintf(
             esc_html_x('By %s', 'post author', 'intimate'),
@@ -41,8 +41,8 @@ if ( ! function_exists( 'intimate_posted_by' ) ) :
 	function intimate_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'By %s', 'post author', 'intimate' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			esc_html_x( '%s', 'post author', 'intimate' ),
+			'<span class="author vcard"><i class="fa fa-user-circle-o"></i><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
         echo '<span class="post_by"> ' . $byline . '</span>'; // WPCS: XSS OK.
 	}

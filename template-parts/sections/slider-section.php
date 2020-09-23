@@ -156,7 +156,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                       <div class="card__post__body my-auto">
                           <div class="card__post__content">
                               <div class="card__post__author-info mb-1">
-                                  <ul class="list-inline">
+                                  <ul class="list-inline cat-links">
                                       <li class="list-inline-item">
                                           <?php
                                           $categories = get_the_category();
@@ -173,15 +173,6 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                                           <?php the_title(); ?>
                                       </a>
                                   </h6>
-                              </div>
-                              <div class="card__post__author-info">
-                                  <ul class="list-inline">
-                                      <li class="list-inline-item">
-                                          <span class="text-dark text-capitalize">
-                                              <?php intimate_posted_on(); ?>
-                                          </span>
-                                      </li>
-                                  </ul>
                               </div>
                           </div>
                       </div>
@@ -214,7 +205,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                     <div class="card__post__body my-auto">
                         <div class="card__post__content">
                               <div class="card__post__author-info mb-1">
-                                  <ul class="list-inline">
+                                  <ul class="list-inline cat-links">
                                       <li class="list-inline-item">
                                           <?php
                                           $categories = get_the_category();
@@ -231,15 +222,6 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                                           <?php the_title(); ?>
                                       </a>
                                   </h6>
-                              </div>
-                              <div class="card__post__author-info">
-                                  <ul class="list-inline">
-                                      <li class="list-inline-item">
-                                          <span class="text-dark text-capitalize">
-                                              <?php intimate_posted_on(); ?>
-                                          </span>
-                                      </li>
-                                  </ul>
                               </div>
                           </div>
                     </div>
@@ -272,7 +254,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                     <div class="card__post__body my-auto">
                         <div class="card__post__content">
                               <div class="card__post__author-info mb-1">
-                                  <ul class="list-inline">
+                                  <ul class="list-inline cat-links">
                                       <li class="list-inline-item">
                                           <?php
                                           $categories = get_the_category();
@@ -289,15 +271,6 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                                           <?php the_title(); ?>
                                       </a>
                                   </h6>
-                              </div>
-                              <div class="card__post__author-info">
-                                  <ul class="list-inline">
-                                      <li class="list-inline-item">
-                                          <span class="text-dark text-capitalize">
-                                              <?php intimate_posted_on(); ?>
-                                          </span>
-                                      </li>
-                                  </ul>
                               </div>
                           </div>
                     </div>

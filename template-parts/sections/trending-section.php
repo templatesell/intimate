@@ -42,7 +42,14 @@ $trending_id = absint($intimate_theme_options['intimate-select-big-trending-cate
                 
                 <div class="card__post__body my-auto">
                   <div class="card__post__content">
-                    <div class="card__post__author-info mb-1">
+                    <div class="card__post__title">
+                      <h6 class="mb-1">
+                        <a href="<?php the_permalink();?>">
+                          <?php the_title();?>
+                        </a>
+                      </h6>
+                    </div>
+                    <div class="card__post__author-info">
                       <ul class="list-inline">
                         <li class="list-inline-item">
                           <?php intimate_posted_by(); ?>
@@ -51,13 +58,6 @@ $trending_id = absint($intimate_theme_options['intimate-select-big-trending-cate
                           <?php intimate_posted_on(); ?>
                         </li>
                       </ul>
-                    </div>
-                    <div class="card__post__title">
-                      <h6>
-                        <a href="<?php the_permalink();?>">
-                          <?php the_title();?>
-                        </a>
-                      </h6>
                     </div>
                   </div>
                 </div>
