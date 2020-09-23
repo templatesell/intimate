@@ -553,8 +553,8 @@ pre code {
 
 .container-fluid {
   width: 100%;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -562,6 +562,7 @@ pre code {
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
+    width: 100%!important;
   }
 }
 .row {

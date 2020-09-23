@@ -126,8 +126,8 @@ if (!function_exists('intimate_dynamic_css')) :
         //Header Min Height
         if (!empty($intimate_side_width)) {
             $custom_css .= "
-            .container { 
-                width : ". $intimate_side_width."px; 
+            .container-fluid { 
+                width : ". $intimate_side_width."%; 
             }";
         }
 

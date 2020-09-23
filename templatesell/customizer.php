@@ -75,7 +75,7 @@ if ( !function_exists('intimate_default_theme_options_values') ) :
             'intimate-single-social-share' => 1,
 
             /*Site Layout Options*/
-            'intimate_container_width_options' => 1600,
+            'intimate_container_width_options' => 100,
 
 
             /*Sticky Sidebar*/
