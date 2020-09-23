@@ -26,17 +26,17 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
         <div class="row no-gutters">
           <div class="col-lg-8">
             <div class="modern-slider">
-        				<?php while ($slider_query->have_posts()) : $slider_query->the_post(); 
-                  if(has_post_thumbnail()){
-                  $image_id = get_post_thumbnail_id();
-                  $image_url = wp_get_attachment_image_src( $image_id,'',true );
-                ?>
+        				<?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
                 <div class="slider-items">
                   <div class="slide-wrap">
+                  <?php if(has_post_thumbnail()){ ?>
                   <div class="img-cover">
                     <?php intimate_post_thumbnail('intimate-promo-post'); ?>
                   </div>
-                
+                <?php } else{ ?>
+                  <div class="img-cover no-image-slider">
+                  </div>
+                <?php } ?>                
                       <div class="caption bg__post-cover">
                             <?php
                                $categories = get_the_category();
@@ -54,7 +54,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                       </div>
                     </div>
                   </div>
-                <?php } endwhile;
+                <?php endwhile;
                 wp_reset_postdata(); ?>
             </div>
           </div>
@@ -75,9 +75,13 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
               <!-- Post Article -->
               <div class="card__post ">
                   <div class="card__post__body card__post__transition">
-                      <a href="#">
+                       <?php if(has_post_thumbnail()){ ?>
+                      <a href="<?php the_permalink();?>">
                           <?php the_post_thumbnail(); ?>
                       </a>
+                    <?php }else{ ?> 
+                        <div class="no-image-slider-right"></div>
+                      <?php } ?>
                       <div class="card__post__content bg__post-cover">
                           <div class="card__post__category">
                               <?php
@@ -89,7 +93,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                           </div>
                           <div class="card__post__title">
                               <h5 class="mb-1">
-                                  <a href="#"><?php the_title(); ?></a>
+                                  <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
                               </h5>
                           </div>
                           <div class="card__post__author-info">

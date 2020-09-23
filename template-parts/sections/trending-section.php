@@ -29,11 +29,17 @@ $trending_id = absint($intimate_theme_options['intimate-select-big-trending-cate
             <div class="item">
               <!-- Post Article -->
               <div class="card__post card__post-list">
+                <?php if(has_post_thumbnail()){ ?>
                 <div class="image-sm my-auto">
                   <a href="<?php the_permalink();?>">
                     <?php the_post_thumbnail('thumbnail'); ?>
                   </a>
                 </div>
+                <?php }else{  ?>
+                  <div class="image-sm my-auto no-image-trending">
+                  </div>
+                <?php } ?>
+                
                 <div class="card__post__body my-auto">
                   <div class="card__post__content">
                     <div class="card__post__author-info mb-1">

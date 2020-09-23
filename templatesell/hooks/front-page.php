@@ -96,9 +96,13 @@ if (!function_exists('intimate_front_page_grid_slider')) :
                         <!-- Post Article -->
                         <div class="card__post">
                             <div class="card__post__body">
+                                <?php if(has_post_thumbnail()){ ?>
                                 <a href="<?php the_permalink(); ?>">
                                     <?php the_post_thumbnail('full'); ?>
                                     </a>
+                                <?php }else{ ?>
+                                    <div class="no-image-grid"></div>
+                                <?php } ?>
                                 <div class="card__post__content ">
                                     <div class="card__post__author-info mb-2">
                                         <?php intimate_list_category(get_the_ID()); ?>
@@ -174,9 +178,13 @@ if (!function_exists('intimate_front_page_you_missed')) :
                     <!-- Post Article -->
                     <div class="card__post">
                         <div class="card__post__body">
+                            <?php if(has_post_thumbnail()){  ?>
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail('full'); ?>
                                 </a>
+                            <?php }else{ ?>
+                              <div class="no-image-missed"></div>
+                            <?php } ?>
                             <div class="card__post__content bg__post-cover">
                                 <div class="card__post__category">
                                     <?php
