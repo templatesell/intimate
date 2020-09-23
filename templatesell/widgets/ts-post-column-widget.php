@@ -68,42 +68,76 @@ if (!class_exists('Intimate_Post_Column')) :
                     <!-- Post Article -->
                     <div class="card__post mb-3">
                       <div class="row">
-                        <div class="col-md-5 my-auto">
-                          <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail('large'); ?>
-                          </a>
-                        </div>
-                        <div class="col-md-7 my-auto">
-                          <div class="card__post__body">
-                              <div class="card__post__content ">
-                                  <div class="card__post__author-info mb-2">
-                                    <?php intimate_list_category(get_the_ID()); ?>
-                                  </div>
-                                  <div class="card__post__title">
-                                      <h3 class="mb-2">
-                                        <a href="<?php the_permalink(); ?>">
-                                          <?php the_title(); ?></a>
-                                      </h3>
-                                  </div>
-                                  <div class="card__post__author-info mb-2">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <?php intimate_posted_by(); ?>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <span>
-                                                <?php intimate_posted_on(); ?>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                  </div>
-                                  <div class="card__post__text mb-2">
-                                      <?php the_excerpt(); ?>
-                                  </div>
-                                  <a href="<?php the_permalink(); ?>" class="readmore mt-2"><?php esc_html_e('Read More', 'intimate'); ?></a>
-                              </div>
+                        <?php if(has_post_thumbnail()){ ?>
+                          <div class="col-md-5 my-auto">
+                            <a href="<?php the_permalink(); ?>">
+                                  <?php the_post_thumbnail('large'); ?>
+                            </a>
                           </div>
-                        </div>
+                          <div class="col-md-7 my-auto">
+                            <div class="card__post__body">
+                                <div class="card__post__content ">
+                                    <div class="card__post__author-info mb-2">
+                                      <?php intimate_list_category(get_the_ID()); ?>
+                                    </div>
+                                    <div class="card__post__title">
+                                        <h3 class="mb-2">
+                                          <a href="<?php the_permalink(); ?>">
+                                            <?php the_title(); ?></a>
+                                        </h3>
+                                    </div>
+                                    <div class="card__post__author-info mb-2">
+                                      <ul class="list-inline">
+                                          <li class="list-inline-item">
+                                              <?php intimate_posted_by(); ?>
+                                          </li>
+                                          <li class="list-inline-item">
+                                              <span>
+                                                  <?php intimate_posted_on(); ?>
+                                              </span>
+                                          </li>
+                                      </ul>
+                                    </div>
+                                    <div class="card__post__text mb-2">
+                                        <?php the_excerpt(); ?>
+                                    </div>
+                                    <a href="<?php the_permalink(); ?>" class="readmore mt-2"><?php esc_html_e('Read More', 'intimate'); ?></a>
+                                </div>
+                            </div>
+                          </div>
+                          <?php } else{ ?>
+                          <div class="col-md-12 my-auto">
+                            <div class="card__post__body">
+                                <div class="card__post__content ">
+                                    <div class="card__post__author-info mb-2">
+                                      <?php intimate_list_category(get_the_ID()); ?>
+                                    </div>
+                                    <div class="card__post__title">
+                                        <h3 class="mb-2">
+                                          <a href="<?php the_permalink(); ?>">
+                                            <?php the_title(); ?></a>
+                                        </h3>
+                                    </div>
+                                    <div class="card__post__author-info mb-2">
+                                      <ul class="list-inline">
+                                          <li class="list-inline-item">
+                                              <?php intimate_posted_by(); ?>
+                                          </li>
+                                          <li class="list-inline-item">
+                                              <span>
+                                                  <?php intimate_posted_on(); ?>
+                                              </span>
+                                          </li>
+                                      </ul>
+                                    </div>
+                                    <div class="card__post__text mb-2">
+                                        <?php the_excerpt(); ?>
+                                    </div>
+                                    <a href="<?php the_permalink(); ?>" class="readmore mt-2"><?php esc_html_e('Read More', 'intimate'); ?></a>
+                                </div>
+                            </div>
+                          </div>    
+                          <?php } ?>
                       </div>
                     </div>
                      <?php

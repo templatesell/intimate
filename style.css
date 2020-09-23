@@ -1921,6 +1921,7 @@ div#MobileMenu {
 .slider-items{
     display: block!important;
 }
+.no-image-slider,
 .slide-wrap img{
     max-width: 100%;
     width: 100%;
@@ -1928,6 +1929,10 @@ div#MobileMenu {
     -o-object-fit: cover;
     object-fit: cover;
     position: relative;
+}
+
+.no-image-slider {
+    background: #f7f7f7;
 }
 .slide-wrap .caption {
     text-align: left;
@@ -2489,19 +2494,19 @@ object {
 
 .post-content {
     position: relative;
-    padding: 20px 15px;
+    padding: 20px 0;
     word-wrap: break-word;
     overflow: hidden;
 }
 .post-content {
-    padding-bottom: 0;
+    padding-bottom: 25px;
 }
 
 
 
 /* date */
 .post-date {
-    margin: 20px 0;
+    margin: 0 0 10px 0;
     font-size: 12px;
     font-style: normal;
     text-transform: capitalize;
@@ -2527,9 +2532,7 @@ object {
 
 /* title */
 .post-title {
-    margin: 10px 0 15px 0;
-    font-size: 24px;
-    line-height: 1.8;
+    margin: 5px 0 10px;
     color: #000000;
 }
 .post-title a {
@@ -4349,7 +4352,7 @@ article{
     text-transform: capitalize;
     color: #2f3235;
     position: relative;
-    font-size: 18px;
+    font-size: 22px;
 }
 .widget .widgettitle:after,
 .widget .widget-title:after {
@@ -5653,6 +5656,11 @@ ul.social-menu li a[href*="dribble.com"]:before {
     width: 100% !important;
     height: auto;
 }
+.no-image-trending{
+    display: none;
+    width: 0px;
+    height: 0px;
+}
 .card__post-list-top:first-child {
     margin-top: 0;
 }
@@ -5690,6 +5698,8 @@ ul.social-menu li a[href*="dribble.com"]:before {
 .card__post .card__post__body {
     display: block;
 }
+.no-image-missed,
+.no-image-slider-right,
 .card__post .card__post__body img {
     -o-object-fit: cover;
     object-fit: cover;
@@ -5698,8 +5708,12 @@ ul.social-menu li a[href*="dribble.com"]:before {
     height: 260px;
     position: relative;
 }
+.no-image-missed,
+.no-image-slider-right{
+    background: #f7f7f7;
+}
 .card__post__content {
-    padding: 20px;
+    padding: 20px 0;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -5729,6 +5743,9 @@ ul.social-menu li a[href*="dribble.com"]:before {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+.card__post__content.bg__post-cover {
+    padding: 20px;
+}
 .bg__post-cover .card__post__category a,
 .card__post__body .bg__post-cover .card__post__title h5 a,
 .card__post__body .bg__post-cover .card__post__author-info span,
@@ -5743,16 +5760,22 @@ ul.social-menu li a[href*="dribble.com"]:before {
     top: 0;
     position: absolute;
 }
-
-/*POST GRID*/
-.post__grid .card__post__body{
-    background-color: #f8f8f8;
+.no-image{
+    background: #f7f7f7;
 }
-.post__grid .card__post__title h5 a,
-.post__grid .card__post__author-info span, 
-.post__grid .card__post__author-info a,
-.post__grid  .card__post__text p{
-    color: #333;
+/*POST GRID*/
+.post__grid .card__post__title h5 a{
+    color: #000000;
+}
+.post__grid .cat-links a{
+    color: #d42929;
+    font-size: 14px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+.post__grid .cat-links a:hover{
+    text-decoration: underline;
 }
 .intimate-post-grid .widget-title{
     position: relative;
@@ -5781,6 +5804,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 }
 
 /*FEATURED POST SLIDER*/
+.post__featured .card__post .card__post__body .no-image,
 .post__featured .card__post .card__post__body img{
     height: 300px;
 }
@@ -5805,7 +5829,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
     overflow: hidden;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-    top: -75px;
+    top: -60px;
     z-index: 1;
 }
 .fetured__post__carousel .slick-next::before,
@@ -5838,6 +5862,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 .latest__post .card__post__body .bg__post-cover .card__post__title h3 a{
     color: #fff;
 }
+.latest__post .card__post .card__post__body .no-image,
 .latest__post .card__post .card__post__body img{
     -o-object-fit: cover;
     object-fit: cover;

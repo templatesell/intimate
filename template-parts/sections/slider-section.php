@@ -143,9 +143,16 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                     while($p_the_query->have_posts())
                       : $p_the_query->the_post(); ?>
                   <div class="card__post card__post-list py-2">
+                      <?php if(has_post_thumbnail()){ ?>
                       <div class="image-sm my-auto">
+                        <a href="<?php the_permalink();?>">
                           <?php the_post_thumbnail('thumbnail'); ?>
+                        </a>
                       </div>
+                      <?php }else{  ?>
+                        <div class="no-image">
+                        </div>
+                      <?php } ?>
                       <div class="card__post__body my-auto">
                           <div class="card__post__content">
                               <div class="card__post__author-info mb-1">
@@ -195,9 +202,15 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                       : $t_the_query->the_post(); ?>
                 <!-- Post Article -->
                 <div class="card__post card__post-list py-2">
-                    <div class="image-sm my-auto">
-                        <?php the_post_thumbnail('thumbnail'); ?>
-                    </div>
+                    <?php if(has_post_thumbnail()){ ?>
+                      <div class="image-sm my-auto">
+                        <a href="<?php the_permalink();?>">
+                          <?php the_post_thumbnail('thumbnail'); ?>
+                        </a>
+                      </div>
+                      <?php }else{  ?>
+                        <div class="no-image"></div>
+                      <?php } ?>
                     <div class="card__post__body my-auto">
                         <div class="card__post__content">
                               <div class="card__post__author-info mb-1">
@@ -247,9 +260,15 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                       : $t_the_query->the_post(); ?>
                 <!-- Post Article -->
                 <div class="card__post card__post-list py-2">
-                    <div class="image-sm my-auto">
-                        <?php the_post_thumbnail('thumbnail'); ?>
-                    </div>
+                    <?php if(has_post_thumbnail()){ ?>
+                      <div class="image-sm my-auto">
+                        <a href="<?php the_permalink();?>">
+                          <?php the_post_thumbnail('thumbnail'); ?>
+                        </a>
+                      </div>
+                      <?php }else{  ?>
+                        <div class="no-image"></div>
+                      <?php } ?>
                     <div class="card__post__body my-auto">
                         <div class="card__post__content">
                               <div class="card__post__author-info mb-1">

@@ -37,8 +37,26 @@ $author = absint($intimate_theme_options['intimate-show-hide-author']);
                 if (is_singular()) :
                     the_title('<h1 class="post-title entry-title">', '</h1>');
                 else :
-                    the_title('<h2 class="post-title entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
+                    the_title('<h5 class="post-title entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h5>');
                     ?>
+                <?php endif; ?>
+            </div>
+            <div class="post-meta">
+                <?php
+                if ('post' === get_post_type()) :
+                    ?>
+                    <div class="post-date">
+                        <div class="entry-meta">
+                            <?php
+                            if($date == 1 ){
+                                intimate_posted_on();
+                            }
+                            if($author == 1 ){
+                                intimate_posted_by();
+                            }
+                            ?>
+                        </div><!-- .entry-meta -->
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="post-excerpt entry-content">
@@ -62,25 +80,6 @@ $author = absint($intimate_theme_options['intimate-show-hide-author']);
                     <a class="more-link" href="<?php the_permalink(); ?>"><?php echo esc_html($read_more); ?> <i
                                 class="fa fa-long-arrow-right"></i>
                     </a>
-                <?php endif; ?>
-            </div>
-            <!-- .entry-content end -->
-            <div class="post-meta">
-                <?php
-                if ('post' === get_post_type()) :
-                    ?>
-                    <div class="post-date">
-                        <div class="entry-meta">
-                            <?php
-                            if($date == 1 ){
-                                intimate_posted_on();
-                            }
-                            if($author == 1 ){
-                                intimate_posted_by();
-                            }
-                            ?>
-                        </div><!-- .entry-meta -->
-                    </div>
                 <?php endif; ?>
             </div>
         </div>

@@ -72,9 +72,13 @@ if (!class_exists('Intimate_Latest_Post')) :
                       <!-- Post Article -->
                       <div class="card__post">
                         <div class="card__post__body">
-                          <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('large'); ?>
-                          </a>
+                          <?php if(has_post_thumbnail()){ ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail('large'); ?>
+                            </a>
+                            <?php } else{ ?>
+                              <div class="no-image"></div>
+                            <?php } ?>
                           <div class="card__post__content bg__post-cover">
                             <div class="card__post__category">
                               <?php
@@ -111,11 +115,14 @@ if (!class_exists('Intimate_Latest_Post')) :
                     <?php }else{ ?>
                         <!-- Post Article -->
                         <div class="card__post card__post-list mb-3">
+                          <?php if(has_post_thumbnail()){ ?>
                           <div class="image-sm my-auto">
-                            <a href="<?php the_permalink(); ?>">
-                              <?php the_post_thumbnail('thumbnail'); ?>
-                            </a>
-                          </div>
+                              <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail('thumbnail'); ?>
+                                </a>
+                          </div><?php } else{ ?>
+                            <div class="no-image"></div>
+                          <?php } ?>
                           <div class="card__post__body my-auto">
                             <div class="card__post__content">
                               <div class="card__post__author-info mb-1">

@@ -69,9 +69,13 @@ if (!class_exists('Intimate_Post_Grid')) :
                     <!-- Post Article -->
                     <div class="card__post">
                         <div class="card__post__body">
+                            <?php if(has_post_thumbnail()){ ?>
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail('full'); ?>
-                                </a>
+                            </a>
+                            <?php } else{ ?>
+                              <div class="no-image"></div>
+                            <?php } ?>
                             <div class="card__post__content ">
                                 <div class="card__post__author-info mb-2">
                                     <?php intimate_list_category(get_the_ID()); ?>

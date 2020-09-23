@@ -58,7 +58,7 @@ if ( !function_exists('intimate_default_theme_options_values') ) :
             /*Blog Page*/
             'intimate-sidebar-blog-page' => 'right-sidebar',
             'intimate-content-show-from' => 'excerpt',
-            'intimate-excerpt-length'    => 25,
+            'intimate-excerpt-length'    => 15,
             'intimate-pagination-options'=> 'numeric',
             'intimate-blog-exclude-category'=> '',
             'intimate-read-more-text'    => '',
