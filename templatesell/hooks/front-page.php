@@ -125,9 +125,6 @@ if (!function_exists('intimate_front_page_grid_slider')) :
                                           </li>
                                       </ul>
                                     </div>
-                                    <div class="card__post__text">
-                                        <?php the_excerpt(); ?>
-                                    </div>
                                 </div>
                             </div>
                         </div>

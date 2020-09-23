@@ -17,7 +17,7 @@ if (!class_exists('Intimate_Post_Slider')) :
          private function defaults()
         {
             $defaults = array(
-            'title' => esc_html__('Recent Posts', 'intimate' ),
+            'title' => esc_html__('Slide Posts', 'intimate' ),
             'cat' => 0,
             'post-number' => 5,
            );

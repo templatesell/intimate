@@ -20,6 +20,7 @@ if (!class_exists('Intimate_Post_Grid')) :
             'title' => esc_html__('Grid Posts', 'intimate' ),
             'cat' => 0,
             'post-number' => 6,
+            'excerpt-length'=> 15,
            );
         return $defaults;
         }
@@ -49,6 +50,7 @@ if (!class_exists('Intimate_Post_Grid')) :
             $cat_id = !empty($instance['cat']) ? $instance['cat'] : '';
 
             $post_number = !empty($instance['post-number']) ? $instance['post-number'] : '';
+            $excerpt_length = !empty($instance['excerpt-length']) ? $instance['excerpt-length'] : '';
 
             $query_args = array(
                 'post_type' => 'post',
@@ -99,7 +101,7 @@ if (!class_exists('Intimate_Post_Grid')) :
                                   </ul>
                                 </div>
                                 <div class="card__post__text">
-                                    <?php the_excerpt(); ?>
+                                     <?php echo wp_trim_words(get_the_content(),$excerpt_length); ?>
                                 </div>
                             </div>
                         </div>
@@ -124,6 +126,7 @@ if (!class_exists('Intimate_Post_Grid')) :
         $instance['cat'] = absint($new_instance['cat']);
 
         $instance['post-number'] = absint($new_instance['post-number']);
+        $instance['excerpt-length'] = absint($new_instance['excerpt-length']);
 
         return $instance;
 
@@ -167,6 +170,13 @@ if (!class_exists('Intimate_Post_Grid')) :
             name="<?php echo esc_attr($this->get_field_name('post-number')); ?>" type="number"
             value="<?php echo esc_attr($instance['post-number']); ?>"/>
         </p>
+        <p>
+        <label
+        for="<?php echo esc_attr($this->get_field_id('excerpt-length')); ?>"><?php esc_html_e('Excerpt Length', 'intimate'); ?></label>
+        <input class="widefat" id="<?php echo esc_attr($this->get_field_id('excerpt-length')); ?>"
+        name="<?php echo esc_attr($this->get_field_name('excerpt-length')); ?>" type="number"
+        value="<?php echo esc_attr($instance['excerpt-length']); ?>"/>
+    </p>
 
         <?php
     }
