@@ -82,9 +82,9 @@ if (!class_exists('Intimate_Recent_Post_Sidebar')) :
                         </figure>
                         <span class="widget_featured_post_num"><?php echo $i; ?></span>
                         <div class="widget_featured_content">
-                                <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                <h4 class="entry-title mb-1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                 <div class="post-date">
-                                    <?php echo get_the_date(); ?>
+                                    <?php intimate_posted_on(); ?>
                                 </div><!-- .entry-meta -->
                         </div>
                     </li>

@@ -59,7 +59,7 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
             ?>
         </section>
     <?php } ?>
-    <div class="footer-wrap">
+    <div class="footer-wrap bg__footer_dark">
     	<div class="container-fluid">
     		<div class="row">
     			<?php
@@ -78,41 +78,32 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
     			?>
     		</div>
     	</div>
-    	<footer class="site-footer">
-    		<div class="container-fluid">
-    			<div class="row">
-    				<div class="col-md-6">
-    					<div class="copyright">
-    						<?php echo $copyright; ?>
-    					</div>
-    					<div class="site-info">
-    						<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'intimate' ) ); ?>">
-    							<?php
-    							/* translators: %s: CMS name, i.e. WordPress. */
-    							printf( esc_html__( 'Proudly powered by %s', 'intimate' ), 'WordPress' );
-    							?>
-    						</a>
-    						<span class="sep"> | </span>
-    						<?php
-    						/* translators: 1: Theme name, 2: Theme author. */
-    						printf( esc_html__( 'Theme: %1$s by %2$s.', 'intimate' ), 'Intimate', '<a href="https://www.templatesell.com/">Template Sell</a>' );
-    						?>
-    					</div>
-    				</div>
-    				<div class="col-md-6">
-    					<?php
-    					if (has_nav_menu('footer')) {
-    						wp_nav_menu( array(
-    							'theme_location' => 'footer',
-    							'menu_id'        => '',
-    							'container' => 'ul',
-    							'menu_class'      => 'footer-menu'
-    						) );
-    					} ?>
-    				</div>
-    			</div>
-    		</div>
-    	</footer>
+        <footer class="site-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 align-self-center">
+                        <div class="copyright">
+                            <?php echo $copyright; ?>
+                            <?php
+                                /* translators: 1: Theme name, 2: Theme author. */
+                                printf( esc_html__( 'Theme: %1$s by %2$s.', 'intimate' ), 'intimate', '<a href="http://www.templatesell.com/">Template Sell</a>' );
+                            ?>
+                        </div>
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                            <?php
+                            if (has_nav_menu('footer')) {
+                                wp_nav_menu( array(
+                                    'theme_location' => 'footer',
+                                    'menu_id'        => '',
+                                    'container' => 'ul',
+                                    'menu_class'      => 'footer-menu'
+                                ) );
+                            } ?>
+                        </div>
+                </div>
+            </div>
+        </footer>
     	<?php do_action('intimate_go_to_top_hook'); ?>
     </div>
 </div><!-- #page -->

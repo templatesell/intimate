@@ -43,6 +43,7 @@ body {
     text-rendering: optimizelegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    background: #fcfcfc;
 }
 
 /* links */
@@ -2257,7 +2258,6 @@ div#MobileMenu {
     position: relative;
     margin-bottom: 0;
     padding: 0;
-    background-color: #ffffff;
 }
 
 /* masonry: 3 columns */
@@ -4327,7 +4327,6 @@ article{
     font-weight: 400;
     line-height: 1.7;
     color: #4c4f53;
-    background: #fff;
 }
 
 .widget a:hover,
@@ -5626,7 +5625,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 ## Card post CSS
 ================================================================*/
 .trending-news-two{
-    padding: 30px 0;
+    padding: 20px 0;
     background: #f8f8f8;
 }
 .image-sm {
@@ -5709,6 +5708,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 .card__post .card__post__body {
     display: block;
 }
+.no-image-grid,
 .no-image-missed,
 .no-image-slider-right,
 .card__post .card__post__body img {
@@ -5719,6 +5719,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
     height: 260px;
     position: relative;
 }
+.no-image-grid,
 .no-image-missed,
 .no-image-slider-right{
     background: #f7f7f7;
@@ -5883,6 +5884,70 @@ ul.social-menu li a[href*="dribble.com"]:before {
     position: relative;
 }
 
+.grid__slider__carousel {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+.grid__slider__carousel .slick-arrow {
+    position: absolute;
+}
+.grid__slider__carousel .slick-next,
+.grid__slider__carousel .slick-prev {
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eee;
+    background: #fff;
+    overflow: hidden;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    top: -60px;
+    z-index: 1;
+}
+.grid__slider__carousel .slick-next::before,
+.grid__slider__carousel .slick-prev::before {
+    font-size: 14px;
+}
+.grid__slider__carousel .slick-next:hover,
+.grid__slider__carousel .slick-prev:hover {
+    background: #f7f7f7;
+}
+.grid__slider__carousel .slick-prev {
+    left: auto;
+    right: 50px;
+    bottom: auto;
+}
+.grid__slider__carousel .slick-next {
+    right: 16px;
+}
+
+.footer-top-box .card__post__body .no-image,
+.footer-top-box .card__post .card__post__body img,
+#secondary .card__post .card__post__body .no-image,
+#secondary .card__post .card__post__body img{
+    height: 215px!important;
+}
+.footer-top-box .post__featured,
+.footer-top-box .latest__post,
+#secondary .post__featured,
+#secondary .latest__post{
+    margin-bottom: 20px;
+}
+
+.footer-top-box [class*="col-"],
+#secondary [class*="col-"]{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.footer-top-box table,
+#secondary table{
+    margin-bottom: 5px;
+}
+.promo-missed-wrapper{
+    margin-bottom: 30px;
+}
 /**
  * Footer
  * -------------------------------------------------------------
@@ -5891,6 +5956,9 @@ ul.social-menu li a[href*="dribble.com"]:before {
     background-color: #ffffff;
     border-top: 1px solid #f1f1f1;
     padding: 0;
+}
+.bg__footer_dark{
+    background: #131313;
 }
 .foot-wrap {
     display: table;
@@ -5901,19 +5969,23 @@ ul.social-menu li a[href*="dribble.com"]:before {
     padding-bottom: 20px;
 }
 .footer-wrap .widget{
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     padding:0;
 }
 .footer-wrap .widget-title,
 .footer-wrap .widget{
     background: transparent;
 }
-.footer-wrap .widget a,
-.footer-wrap .widget{
-    color: rgb(51, 51, 51);
-}
 .footer-wrap .widget-title{
-    color: rgb(51, 51, 51);
+    color: #fff;
+    font-size: 18px;
+}
+.footer-wrap .card__post__title h5 a,
+.footer-wrap .widget a{
+    color: #fff;
+}
+.footer-wrap h3{
+    font-size: 16px;
 }
 .footer-wrap .widget_featured_post_num{
     display: none;
@@ -5923,6 +5995,9 @@ ul.social-menu li a[href*="dribble.com"]:before {
 }
 .footer-wrap .post-date{
     margin:0;
+}
+.footer-wrap .card__post__text{
+    color: #fff;
 }
 .footer-wrap [class*="footer-col-"]:nth-child(2),
 .footer-wrap [class*="footer-col-"]:nth-child(3){
@@ -5938,7 +6013,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
     padding-right: 15px;
     display: table-cell;
     overflow: hidden;
-    border-right: 1px solid #f1f1f1;
+    border-right: 1px solid #1b1b1b;
 }
 div[class*="footer-col-"]:last-child {
     border: 0;
@@ -5973,10 +6048,19 @@ div[class*="footer-col-"]:last-child {
     font-size: 15px;
     padding: 10px 0;
     line-height: 1.7;
+    background: #080808;
     color: rgb(51, 51, 51);
-    border-top: 1px solid #f1f1f1;
 }
-
+.copyright{
+    font-size: 11px;
+    line-height: 1.3;
+    padding: 30px 0;
+    text-align: left;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+    opacity: .8;
+    color: #fff;
+}
 .site-footer a {
     color: #d42929;
 }
@@ -6022,8 +6106,7 @@ div[class*="footer-col-"]:last-child {
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 3;
-    color: rgb(51, 51, 51);
+    color: #fff;
 }
 .footer-menu li a:hover,
 .footer-menu li a:focus {

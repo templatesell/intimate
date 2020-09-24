@@ -77,65 +77,71 @@ if (!function_exists('intimate_front_page_grid_slider')) :
           $query_args = array(
               'post_type' => 'post',
               'cat' => absint($intimate_grid_cat),
-              'posts_per_page' => 4,
+              'posts_per_page' => 5,
               'ignore_sticky_posts' => true
           );
           $query = new WP_Query($query_args); ?>
           <div class="container-fluid">
-            <div class="widget mb-3">
+            <div class="widget mb-0">
               <h2 class="widget-title"><?php echo esc_html($intimate_grid_title); ?></h2>
             </div>
-            <div class="row">
-              <?php if ($query->have_posts()) :
-                          while ($query->have_posts()) :
-                              $query->the_post();
-                              ?>
-                
-                <div class="col-lg-3">
-                    <div class="post__grid mb-3">
-                        <!-- Post Article -->
-                        <div class="card__post">
-                            <div class="card__post__body">
-                                <?php if(has_post_thumbnail()){ ?>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail('full'); ?>
-                                    </a>
-                                <?php }else{ ?>
-                                    <div class="no-image-grid"></div>
-                                <?php } ?>
-                                <div class="card__post__content ">
-                                    <div class="card__post__author-info mb-2">
-                                        <?php intimate_list_category(get_the_ID()); ?>
-                                    </div>
-                                    <div class="card__post__title">
-                                        <h5 class="mb-1">
-                                          <a href="<?php the_permalink(); ?>">
-                                              <?php the_title(); ?></a>
-                                        </h5>
-                                    </div>
-                                    <div class="card__post__author-info mb-2">
-                                      <ul class="list-inline">
-                                          <li class="list-inline-item">
-                                              <?php intimate_posted_by(); ?>
-                                          </li>
-                                          <li class="list-inline-item">
-                                              <span>
-                                                  <?php intimate_posted_on(); ?>
-                                              </span>
-                                          </li>
-                                      </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="grid__slider__carousel mb-4">
+                    <?php if ($query->have_posts()) :
+                    while ($query->have_posts()) :
+                    $query->the_post();
+                    ?>
+                      <div class="post__grid pr-3 pl-3">
+                          <!-- Post Article -->
+                          <div class="card__post">
+                              <div class="card__post__body">
+                                  <?php if(has_post_thumbnail()){ ?>
+                                  <a href="<?php the_permalink(); ?>">
+                                      <?php the_post_thumbnail('full'); ?>
+                                      </a>
+                                  <?php }else{ ?>
+                                      <div class="no-image-grid"></div>
+                                  <?php } ?>
+                                  <div class="card__post__content bg__post-cover">
+                                      <div class="card__post__category">
+                                          <?php
+                                             $categories = get_the_category();
+                                             if ( ! empty( $categories ) ) {
+                                                echo '<a class="s-cat" href="'.esc_url( get_category_link( $categories[0]->term_id ) ).'">'.esc_html( $categories[0]->name ).'</a>';
+                                            }                                 
+                                          ?>
+                                      </div>
+                                      <div class="card__post__title">
+                                          <h5 class="mb-1">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <?php the_title(); ?></a>
+                                          </h5>
+                                      </div>
+                                      <div class="card__post__author-info mb-2">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <?php intimate_posted_by(); ?>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <span>
+                                                    <?php intimate_posted_on(); ?>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    <?php
                     endwhile;
                     wp_reset_postdata();
-                  endif;
-                  ?>
-            </div> 
+                    endif;
+                    ?>
+               </div>
+              </div>
+            </div>
           </div>
 <?php    }
 

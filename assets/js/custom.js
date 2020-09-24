@@ -51,6 +51,42 @@
 			arrows: true,
     	});
 
+    	// grid Post Slider JS
+    	$('.grid__slider__carousel').slick({
+            slidesToShow: 4,
+    		slidesToScroll: 4,
+    		autoplay: false,
+			autoplaySpeed: 5000,
+			dots: false,
+			prevArrow:
+			'<button type="button" class="slick-prev"><span class="fa fa-angle-left"></span></button>',
+			nextArrow:
+			'<button type="button" class="slick-next"><span class="fa fa-angle-right"></span></button>',
+			arrows:true,
+			responsive: [
+				{
+			      breakpoint: 991,
+			      settings: {
+			        slidesToShow: 2,
+			        slidesToScroll: 2,
+			      }
+			    },
+				{
+			      breakpoint: 600,
+			      settings: {
+			        slidesToShow: 2,
+			        slidesToScroll: 2,
+			      }
+			    },
+			    {
+			      breakpoint: 480,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1,
+			      }
+			    }
+			]
+    	});
 
 
     	// Card Post Slider JS
@@ -91,7 +127,7 @@
     	});
 
     	// Treding Slider JS
-    	$('.fetured__post__carousel').slick({
+    	$('#primary .fetured__post__carousel').slick({
             slidesToShow: 3,
     		slidesToScroll: 3,
     		autoplay: true,
@@ -119,6 +155,15 @@
 			      }
 			    }
 			]
+    	});
+    	$('#secondary .fetured__post__carousel, .footer-wrap .fetured__post__carousel').slick({
+            slidesToShow: 1,
+    		slidesToScroll: 1,
+    		prevArrow:
+			'<button type="button" class="slick-prev"><span class="fa fa-angle-left"></span></button>',
+			nextArrow:
+			'<button type="button" class="slick-next"><span class="fa fa-angle-right"></span></button>',
+			arrows: true,
     	});
 
         // Boxes Section
