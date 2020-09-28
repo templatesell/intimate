@@ -42,7 +42,7 @@
             slidesToShow: 1,
     		slidesToScroll: 1,
     		autoplay: true,
-			autoplaySpeed: 5000,
+			autoplaySpeed: 1000,
 			dots: false,
 			prevArrow:
 			'<button type="button" class="slick-prev"><span class="fa fa-angle-left"></span></button>',
@@ -54,9 +54,9 @@
     	// grid Post Slider JS
     	$('.grid__slider__carousel').slick({
             slidesToShow: 4,
-    		slidesToScroll: 4,
+    		slidesToScroll: 1,
     		autoplay: false,
-			autoplaySpeed: 5000,
+			autoplaySpeed: 1000,
 			dots: false,
 			prevArrow:
 			'<button type="button" class="slick-prev"><span class="fa fa-angle-left"></span></button>',
@@ -68,14 +68,14 @@
 			      breakpoint: 991,
 			      settings: {
 			        slidesToShow: 2,
-			        slidesToScroll: 2,
+			        slidesToScroll: 1,
 			      }
 			    },
 				{
-			      breakpoint: 600,
+			      breakpoint: 767,
 			      settings: {
 			        slidesToShow: 2,
-			        slidesToScroll: 2,
+			        slidesToScroll: 1,
 			      }
 			    },
 			    {
@@ -92,8 +92,8 @@
     	// Card Post Slider JS
     	$('.card__post__slider').slick({
             slidesToShow: 4,
-    		slidesToScroll: 4,
-    		autoplay: false,
+    		slidesToScroll: 1,
+    		autoplay: true,
 			autoplaySpeed: 5000,
 			dots: false,
 			prevArrow:
@@ -106,14 +106,14 @@
 			      breakpoint: 991,
 			      settings: {
 			        slidesToShow: 2,
-			        slidesToScroll: 2,
+			        slidesToScroll: 1,
 			      }
 			    },
 				{
-			      breakpoint: 600,
+			      breakpoint: 767,
 			      settings: {
 			        slidesToShow: 2,
-			        slidesToScroll: 2,
+			        slidesToScroll: 1,
 			      }
 			    },
 			    {
@@ -132,7 +132,7 @@
     		slidesToScroll: 3,
     		autoplay: true,
     		infinite: true,
-			autoplaySpeed: 5000,
+			autoplaySpeed: 1000,
 			dots: false,
 			prevArrow:
 			'<button type="button" class="slick-prev"><span class="fa fa-angle-left"></span></button>',
@@ -143,8 +143,8 @@
 				{
 			      breakpoint: 991,
 			      settings: {
-			        slidesToShow: 2,
-			        slidesToScroll: 2,
+			        slidesToShow: 1,
+			        slidesToScroll: 1,
 			      }
 			    },
 			    {
@@ -167,13 +167,19 @@
     	});
 
         // Boxes Section
-	    $('.promo-three').slick({
-	        dots: true,
+	    $('.news__highlight').slick({
+	        dots: false,
+	        autoplay:true,
 	        infinite: true,
 	        speed: 500,
-	        slidesToShow: 3,
-	        slidesToScroll: 3,
-	        arrows: false,
+	        slidesToShow: 2,
+	        slidesToScroll: 1,
+	        arrows: true,
+	        prevArrow:
+			'<button type="button" class="slick-prev"><span class="fa fa-angle-left"></span></button>',
+			nextArrow:
+			'<button type="button" class="slick-next"><span class="fa fa-angle-right"></span></button>',
+			arrows: true,
 	        responsive: [
 				{
 				  breakpoint: 767,

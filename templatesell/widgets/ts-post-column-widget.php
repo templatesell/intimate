@@ -71,12 +71,12 @@ if (!class_exists('Intimate_Post_Column')) :
                     <div class="card__post mb-3">
                       <div class="row">
                         <?php if(has_post_thumbnail()){ ?>
-                          <div class="col-md-5 my-auto">
+                          <div class="col-lg-5 col-md-12 col-sm-12 my-auto">
                             <a href="<?php the_permalink(); ?>">
                                   <?php the_post_thumbnail('large'); ?>
                             </a>
                           </div>
-                          <div class="col-md-7 my-auto">
+                          <div class="col-lg-7 col-md-12 col-sm-12 my-auto">
                             <div class="card__post__body">
                                 <div class="card__post__content ">
                                     <div class="card__post__author-info mb-2">
@@ -108,7 +108,7 @@ if (!class_exists('Intimate_Post_Column')) :
                             </div>
                           </div>
                           <?php } else{ ?>
-                          <div class="col-md-12 my-auto">
+                          <div class="col-lg-12 col-md-12 col-sm-12 my-auto">
                             <div class="card__post__body">
                                 <div class="card__post__content ">
                                     <div class="card__post__author-info mb-2">

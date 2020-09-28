@@ -1279,6 +1279,8 @@ th {
 .main-menu li:hover > ul {
     visibility: visible;
     opacity: 1;
+}
+.main-menu li:focus-within > ul{
     display: block;
 }
 .header-shadow-wrapper {
@@ -1369,9 +1371,14 @@ th {
         background: #f92a28;
         color: #fff;
     }
+    .intimate-home-icon a:hover i{
+        color: #fff;
+        opacity: 0.95;
+    }
+
     span.menu-description {
         position: absolute;
-        top: 0px;
+        top: 2px;
         font-size: 9px;
         background: #f92a28;
         line-height: 12px;
@@ -1382,9 +1389,9 @@ th {
     span.menu-description:before {
         content: " ";
         position: absolute;
-        bottom: -6px;
+        bottom: -4px;
         left: 20%;
-        border-width: 0 0 6px 6px;
+        border-width: 0 0 4px 4px;
         border-style: solid;
         border-color: transparent #f92a28;
     }
@@ -1444,7 +1451,7 @@ th {
         display: block !important;
         position: absolute;
         width: 250px;
-        top: 100%;
+        top:100%;
         left: 0;
         background-color: #fff;
         padding: 27px 0;
@@ -1472,7 +1479,7 @@ th {
         right: 0;
     }
     .main-menu li > ul ul {
-        top: -27px;
+        top: 0;
         left: 100%;
     }
     .main-menu li.submenu-right > ul ul {
@@ -2034,24 +2041,7 @@ div#MobileMenu {
   border-radius: 50%;
   background: #959698;
 }
-@media (max-width: 991px){
-    .slide-wrap{
-        display: block;
-    }
-    .slide-wrap [class*="col-"]{
-        display: block;
-    }
-    .slide-wrap .s-left{
-        float: right;
-    }
-    .slide-wrap .caption {
-        text-align: left;
-        padding: 20px 15px;
-    }
-    .slide-wrap .slider-height {
-        height: 300px;
-    }
-}
+
 
 .tab__wrapper .tabs-nav{
     margin:0 0 5px 0;
@@ -4982,7 +4972,10 @@ article{
     background-color: #f46180;
 }
 
-
+/*Images Wedgets*/
+.banner-add-area .widget_media_image{
+    text-align: center;
+}
 /**
  * Widget: Search
  * -------------------------------------------------------------
@@ -5628,6 +5621,9 @@ ul.social-menu li a[href*="dribble.com"]:before {
     padding: 20px 0;
     background: #f8f8f8;
 }
+.trending-news-two span i{
+    display: none;
+}
 .image-sm {
     display: block;
     height: 100%;
@@ -5687,7 +5683,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 .card__post__author-info span i{
     margin-right: 5px;
 }
-.card__post__category {
+.card__post__category a{
     clear: both;
     color: #fff;
     display: inline-block;
@@ -5698,8 +5694,6 @@ ul.social-menu li a[href*="dribble.com"]:before {
     line-height: 15px;
     text-transform: uppercase;
     font-weight: 600;
-}
-.card__post__category a{
     color: #fff;
 }
 .card__post {
@@ -5764,6 +5758,9 @@ ul.social-menu li a[href*="dribble.com"]:before {
 .card__post__body .bg__post-cover .card__post__author-info a {
     color: #fff;
 }
+.bg__post-cover .card__post__text{
+    color: #fff;
+}
 .bg__post-cover .entry-meta>span{
     margin-right: 5px;
 }
@@ -5774,6 +5771,53 @@ ul.social-menu li a[href*="dribble.com"]:before {
 }
 .no-image{
     background: #f7f7f7;
+}
+
+/*highlights*/
+.news__highlight{
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+.news__highlight .card__post .card__post__body img {
+    height: 360px;
+}
+.news__highlight h3 a{
+    color: #fff;
+}
+.news__highlight .slick-arrow {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 0;
+    color: #fff;
+    font-size: 20px;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    border: 0;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    outline: none;
+}
+.news__highlight:hover .slick-arrow{
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+}
+.news__highlight .slick-arrow.slick-prev{
+  left:30px;
+}
+.news__highlight .slick-arrow.slick-next {
+  left: auto;
+  right:30px;
 }
 /*POST GRID*/
 .post__grid .card__post__title h5 a{
@@ -6032,7 +6076,7 @@ div[class*="footer-col-"]:last-child {
 }
 @media (max-width: 991px) {
    .footer-wrap [class*="footer-col-"]{
-    width: 100%;
+    width: 50%;
     margin-bottom: 20px;
     display: block;
     border: 0;
@@ -6043,6 +6087,19 @@ div[class*="footer-col-"]:last-child {
     }
 }
 
+@media (max-width: 767px){
+    .footer-wrap [class*="footer-col-"]{
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+    border: 0;
+   }
+}
+@media (max-width: 991px) {
+    .header-image .main-menu > ul > li > a{
+        color: #000;
+    }
+}
 /* footer text */
 .site-footer{
     font-size: 15px;
@@ -6306,115 +6363,23 @@ div#intimate-breadcrumbs {
 ## Promo section
 ================================================================
  */
-.promo-section{
-    padding-top: 30px;
-}
-.promo-one,
-.promo-two,
-.promo-three{
-    margin: 0 -15px;
-}
-.promo-section .item{
-    position: relative;
-    padding:15px;
-}
-.promo-one .item .promo-content{
-    color: #fff;
-    max-width: 600px;
-    padding: 0 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    width: 100%;
-    z-index: 20;
-    -webkit-transition: opacity 0.2s ease;
-    -o-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-.promo-section .post-tags{
-    padding: 15px 40px;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.3;
-    text-transform: uppercase;
-    color: #2f3235;
-    background-color: #ffffff;
-    display: inline-block;
-}
-.promo-section .post-tags:hover{
-    opacity: 0.8;
-}
-
-
-.promo-two .item .promo-content{
-    color: #fff;
-    padding: 50px;
-    position: absolute;
-    bottom: 0;
-    left:0;
-    width: 100%;
-}
-.promo-two .post-date a,
-.promo-two .post-category a,
-.promo-two .item .promo-content .post-title{
-    color: #fff;
-}
-.promo-two .post-category{
-    margin-bottom: 10px;
-}
-.promo-two figure{
-    position: relative;
-}
-.inset{
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    background: linear-gradient(0deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 100%);
-}
-
-.promo-three .item .promo-content{
-    padding:15px;
-    background: #fff;
-}
-{
-    margin: 10px 0;
-    text-transform: uppercase;
-}
-.promo-three .post-category a{
-    color: #d42929;
-    font-size: 14px;
-    padding-right: 5px;
-    margin-bottom: 5px;
-    line-height: 20px;
-}
-.promo-three .post-title{
-    font-size: 20px;
-}
 
 /*Slick Dots*/
-.promo-section .slick-dots {
+.slick-dots {
     position: absolute;
     text-align: center;
     left: 0;
     right: 0;
     padding-left: 0;
 }
-.promo-section .slick-dots li {
+.slick-dots li {
     display: inline-block;
     line-height: 0;
 }
-.promo-section .slick-dots li.slick-active button{
-    background: #fff;
+.slick-dots li.slick-active button{
+    background: #333;
 }
-.promo-section .slick-dots li button {
+.slick-dots li button {
     text-indent: -99999px;
     border: 0;
     margin: 0 5px;
@@ -7326,7 +7291,36 @@ div#intimate-breadcrumbs {
 
 /* 991px */
 @media (max-width: 991px) {
+    /*Slider*/
+    .no-image-slider, 
+    .slide-wrap img{
+        height: 260px;
+    }
+    .no-image-slider-right, 
+    .popular__news-right .card__post .card__post__body img {
+        height: 170px;
+    }
+    .popular__news-right .list-inline-item:not(:last-child){
+        display: none;
+    }
+    .popular__news-right .card__post__content.bg__post-cover{
+        padding: 10px;
+    }
+    .popular__news-right h5{
+        font-size: 15px;
+    }
+    .slide-wrap .caption{
+        padding: 20px;
+    }
+    .slide-wrap .caption h2 a{
+        font-size: 20px;
+    }
 
+    .intimate_front_loop_block article {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
     /* footer: copyright text (or some other text) */
     .site-footer {
         float: none;
@@ -7354,19 +7348,27 @@ div#intimate-breadcrumbs {
     .right-sidebar #primary{
         float: none;
     }
-.blog.left-sidebar #primary, 
-.archive.left-sidebar #primary, 
-.page.left-sidebar #primary{
-    float: none;
-}
-.single.single-left-sidebar #primary, .single.single-right-sidebar #primary{
-    max-width: 100%;
-}
+    .blog.left-sidebar #primary, 
+    .archive.left-sidebar #primary, 
+    .page.left-sidebar #primary{
+        float: none;
+    }
+    .single.single-left-sidebar #primary, .single.single-right-sidebar #primary{
+        max-width: 100%;
+    }
 
 }
 
 /* 767px */
 @media (max-width: 767px) {
+    .no-image-slider, 
+    .slide-wrap img{
+        height:350px;
+    }
+    .no-image-slider-right, 
+    .popular__news-right .card__post .card__post__body img {
+        height: 175px;
+    }
 
     /* comments */
     .comment-list .children {
@@ -7381,11 +7383,11 @@ div#intimate-breadcrumbs {
         max-width: 100%
         min-width:100%;
     }
-.blog.left-sidebar #primary, 
-.archive.left-sidebar #primary, 
-.page.left-sidebar #primary{
-    float: none;
-}
+    .blog.left-sidebar #primary, 
+    .archive.left-sidebar #primary, 
+    .page.left-sidebar #primary{
+        float: none;
+    }
 
 }
 
@@ -7447,6 +7449,17 @@ div#intimate-breadcrumbs {
         padding-left: 15px;
     }
 
+}
+@media (max-width: 575px){
+    .no-image-slider, 
+    .slide-wrap img,
+    .no-image-slider-right, 
+    .popular__news-right .card__post .card__post__body img {
+        height: 260px;
+    }
+    .slider-wrapper .no-gutters>div{
+        margin-bottom:1.5rem;
+    }
 }
 
 /* 480px */
@@ -7631,16 +7644,7 @@ div#intimate-breadcrumbs {
         font-size: 24px;
     }
 }
-/*==============================================================
-## Tab Navigate
-================================================================*/
-#primary-menu li.menu-item-has-children.locked > ul,
-#primary-menu li.menu-item-has-children a:focus ~ ul{
-    visibility: visible;
-    opacity: 1;
-    top: 100%;
-    outline: 5px auto red!important;
-}
+
 
 
 /*EXTRA CSS*/

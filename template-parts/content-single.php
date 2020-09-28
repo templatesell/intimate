@@ -21,14 +21,14 @@ $image = absint($intimate_theme_options['intimate-single-page-featured-image']);
                 the_title('<h2 class="post-title entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
                 ?>
             <?php endif; ?>
-            <div class="post-date">
+            <div class="post-date mb-4">
                 <?php
                 if ('post' === get_post_type()) :
                     ?>
                     <div class="entry-meta">
                         <?php
-                        intimate_posted_on();
                         intimate_posted_by();
+                        intimate_posted_on();
                         ?>
                     </div><!-- .entry-meta -->
                 <?php endif; ?>

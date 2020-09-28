@@ -13,16 +13,16 @@ $title = esc_html($intimate_theme_options['intimate_highlights_title']);
 
 if( $promo_cat > 0 && is_home() )
 { ?>
-    <section class="intimate-promo-section">
+    <section class="news__highlight__wrapper mb-4">
         <?php if ( is_front_page() && is_home() )
         {  ?>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="intimate-promo-highlights">
-                    <h2 class="title-highlight">
+                    <h2 class="title-highlight text-center mb-5">
                         <?php echo esc_html($title); ?>
                     </h2>
                 </div>
-                <div class="promo-section promo-three">
+                <div class="news__highlight">
                     <?php
                     $args = array(
                         'cat' => $promo_cat ,
@@ -34,40 +34,48 @@ if( $promo_cat > 0 && is_home() )
                     if($query->have_posts()):                        
                         while($query->have_posts()):
                             $query->the_post();
-                            ?>                            
-                            <div class="item">
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php
-                                    
-                                    if(has_post_thumbnail())
-                                    {
-                                        
-                                        $image_id  = get_post_thumbnail_id();
-                                        $image_url = wp_get_attachment_image_src($image_id,'intimate-promo-post',true);
-                                        ?>
-                                        
-                                        <figure>
-                                            <img src="<?php echo esc_url($image_url[0]);?>">
-                                        </figure>
-                                    <?php   } ?>
-                                </a>
-                                <div class="promo-content">    
-                                    <div class="post-category">
-                                        <?php intimate_list_category(get_the_ID()); ?>
-                                    </div>
+                            ?>
+                            <div class="highlights pr-3 pl-3">                            
+                                <div class="card__post">
+                                    <div class="card__post__body">
+                                        <?php if(has_post_thumbnail()){ ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php the_post_thumbnail('large'); ?>
+                                        </a>
+                                        <?php } else{ ?>
+                                        <div class="no-image"></div>
+                                        <?php } ?>
+                                        <div class="card__post__content bg__post-cover">    
+                                            <div class="card__post__category">
+                                                <?php intimate_list_category(get_the_ID()); ?>
+                                            </div>
 
-                                    <h3 class="post-title entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                    <div class="post-date">
-                                        <div class="entry-meta">
-                                            <?php
-                                            intimate_posted_by();
-                                            intimate_posted_on();
-                                            ?>
-                                        </div><!-- .entry-meta -->
+                                            <div class="card__post__title">
+                                              <h3 class="mb-2">
+                                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                              </h3>
+                                            </div>
+                                            <div class="card__post__author-info mb-2">
+                                                <ul class="list-inline">
+                                                  <li class="list-inline-item">
+                                                    <a href="#">
+                                                      <?php intimate_posted_by(); ?>
+                                                    </a>
+                                                  </li>
+                                                  <li class="list-inline-item">
+                                                    <span>
+                                                      <?php intimate_posted_on(); ?>
+                                                    </span>
+                                                  </li>
+                                                </ul>
+                                            </div>
+                                            <div class="card__post__text mb-2">
+                                                <?php the_excerpt(); ?>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        
                         <?php endwhile; endif; wp_reset_postdata(); ?>
                 </div>
             </div>

@@ -65,7 +65,7 @@ if (!class_exists('Intimate_Latest_Post')) :
           <div class="col-lg-12">
             <div class="latest__post">
               <div class="row">
-                <div class="col-md-7 col-sm-7">
+                <div class="col-lg-7 col-md-12 col-sm-12 mb-3">
                 <?php while ($query->have_posts()) :
                   $query->the_post(); ?>
                   <?php if($i <= 1 ){ ?>                    
@@ -92,7 +92,7 @@ if (!class_exists('Intimate_Latest_Post')) :
                               <h3 class="mb-2">
                                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                               </h3>
-                              </div>
+                            </div>
                               <div class="card__post__author-info mb-2">
                                 <ul class="list-inline">
                                   <li class="list-inline-item">
@@ -110,9 +110,9 @@ if (!class_exists('Intimate_Latest_Post')) :
                             </div>
                           </div>
                         </div>                        
-                    </div>
-                    <div class="col-md-5 col-sm-5">
-                    <?php }else{ ?>
+                      </div>
+                    <div class="col-lg-5 col-md-12 col-sm-12">
+                      <?php }else{ ?>
                         <!-- Post Article -->
                         <div class="card__post card__post-list mb-3">
                           <?php if(has_post_thumbnail()){ ?>

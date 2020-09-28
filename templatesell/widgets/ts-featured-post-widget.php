@@ -65,7 +65,7 @@ if (!class_exists('Intimate_Featured_Post_Content')) :
           <?php while ($query->have_posts()) :
                     $query->the_post(); ?>
             <?php if($i <= 2 ){ ?>
-            <div class="col-sm-12 col-md-6 mb-3">
+            <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
                 <div class="post__featured">
                   <!-- Post Article -->
                     <div class="card__post">
@@ -111,7 +111,7 @@ if (!class_exists('Intimate_Featured_Post_Content')) :
             </div>
           <?php }else{ ?>
                     
-            <div class="col-sm-12 col-md-6 mb-3">
+            <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
                 <div class="mb-3">
                   <!-- Post Article -->
                   <div class="card__post card__post-list">

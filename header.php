@@ -59,6 +59,17 @@ if ( function_exists( 'wp_body_open' ) ) {
             ?>
         </section>
     <?php } ?>
+    <?php if (is_active_sidebar('below-slider-area') && (is_home() || is_front_page())) { ?>
+        <section class=" slider-below-widget-wrapper banner-add-area">
+            <div class="container-fluid">
+                <?php 
+                /*
+                * Widget area below slider
+                */
+                dynamic_sidebar( 'below-slider-area' ); ?>
+            </div>
+        </section>
+    <?php } ?>
     <?php if ($enable_box == 1 && (is_home() || is_front_page() ) )  { ?>
         <section class="promo-slider-wrapper">
             <?php
@@ -83,14 +94,4 @@ if ( function_exists( 'wp_body_open' ) ) {
         </section>
     <?php } ?>
 
-    <?php if (is_active_sidebar('below-slider-area') && (is_home() || is_front_page())) { ?>
-        <section class=" slider-below-widget-wrapper post-area">
-            <div class="container">
-                <?php 
-                /*
-                * Widget area below slider
-                */
-                dynamic_sidebar( 'below-slider-area' ); ?>
-            </div>
-        </section>
-    <?php } ?>
+    

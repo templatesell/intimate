@@ -22,9 +22,9 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
 		if ($slider_query->have_posts()): ?>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-9">
+      <div class="col-lg-9 col-md-7 col-sm-12">
         <div class="row no-gutters">
-          <div class="col-lg-8">
+          <div class="col-lg-8 col-md-12 col-sm-7">
             <div class="modern-slider">
         				<?php while ($slider_query->have_posts()) : $slider_query->the_post(); ?>
                 <div class="slider-items">
@@ -58,8 +58,8 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                 wp_reset_postdata(); ?>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="popular__news-right">
+          <div class="col-lg-4 col-md-12 col-sm-5">
+            <div class="popular__news-right row no-gutters">
               <?php
               $r_args = array(
               'posts_per_page' => 2,
@@ -73,8 +73,9 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
               ?>
 
               <!-- Post Article -->
-              <div class="card__post ">
-                  <div class="card__post__body card__post__transition">
+              <div class="col-lg-12 col-md-6 col-sm-12">
+              <div class="card__post">
+                  <div class="card__post__body card__post__right">
                        <?php if(has_post_thumbnail()){ ?>
                       <a href="<?php the_permalink();?>">
                           <?php the_post_thumbnail(); ?>
@@ -113,13 +114,14 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                       </div>
                   </div>
               </div>
+              </div>
               <!-- Post Article -->
              <?php endwhile; wp_reset_postdata();  endif; ?>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-5 col-sm-12">
         <div class="tab__wrapper">
           <ul id="tab_first" class="tabs-nav">
               <li class="tab-active"><a data-toggle="tab" href="#TB1"><i class="fa fa-fire"></i><?php esc_html_e('Popular', 'intimate'); ?></a></li>

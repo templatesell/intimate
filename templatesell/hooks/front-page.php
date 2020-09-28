@@ -176,8 +176,8 @@ if (!function_exists('intimate_front_page_you_missed')) :
             while ($query->have_posts()) :
             $query->the_post();
           ?>
-            <div class="col-lg-3">
-                <div class="post__grid mb-3">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="post__grid mb-4">
                     <!-- Post Article -->
                     <div class="card__post">
                         <div class="card__post__body">

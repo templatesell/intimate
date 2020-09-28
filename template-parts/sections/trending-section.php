@@ -52,9 +52,6 @@ $trending_id = absint($intimate_theme_options['intimate-select-big-trending-cate
                     <div class="card__post__author-info">
                       <ul class="list-inline">
                         <li class="list-inline-item">
-                          <?php intimate_posted_by(); ?>
-                        </li>
-                        <li class="list-inline-item">
                           <?php intimate_posted_on(); ?>
                         </li>
                       </ul>
