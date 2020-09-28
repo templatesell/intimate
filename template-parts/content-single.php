@@ -71,6 +71,17 @@ $image = absint($intimate_theme_options['intimate-single-page-featured-image']);
                 ?>
             </footer><!-- .entry-footer -->
             <?php the_post_navigation(); ?>
+            <div class="col-lg-12">
+                <?php 
+                /**
+                 * intimate_related_posts hook
+                 * @since Intimate 1.0.0
+                 *
+                 * @hooked intimate_related_posts -  10
+                 */
+                do_action( 'intimate_related_posts' ,get_the_ID() );
+                ?>
+            </div>
         </div>
     </div>
 </article><!-- #post-<?php the_ID(); ?> -->

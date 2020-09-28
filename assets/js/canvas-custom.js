@@ -2,19 +2,10 @@
 
 (function($) {
     "use strict";
+    var KEYCODE_TAB = 9;
     // collapse sidebar - start
       // --------------------------------------------------
       $(document).ready(function () {
-        $('.close-btn, .overlay').on('click', function () {
-          $('.offcanvas__block').removeClass('active');
-          $('.overlay').removeClass('active');
-        });
-
-        $('.menu-btn').on('click', function () {
-          $('.offcanvas__block').addClass('active');
-          $('.overlay').addClass('active');
-        });
-
         $(".menu-btn").on("click", function(e) {
             var element = document.querySelector( '.offcanvas__block' );
             var focusable = element.querySelectorAll( 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
@@ -22,6 +13,40 @@
             var lastFocusable = focusable[focusable.length - 1];
             tab_focus( firstFocusable, lastFocusable );
         });
+        $(function() {
+        $(".canvas-btn").on("click", function(e) {
+            $(".canvas-header").toggleClass("activate");
+            var element = document.querySelector( '.offcanvas__wrapper' );
+            var focusable = element.querySelectorAll( 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            var firstFocusable = focusable[0];
+            var lastFocusable = focusable[focusable.length - 1];
+            tab_focus( firstFocusable, lastFocusable );
+        });
+
+        $('.canvas-header').on("click", function(e) {
+            if ( $(e.target).parents().hasClass('offcanvas__block') ) {
+                $(".canvas-header").addClass("activate");
+            } else {
+                $(".canvas-header").removeClass("activate");
+                var focusClass = $(".canvas-header.close-btn").data( 'focus' );
+                $( '.' + focusClass ).find( 'a' ).focus();
+            }
+        });
+    });
+        
+        // $('.close-btn, .overlay').on('click', function () {
+        //   $('.offcanvas__block').removeClass('active');
+        //   $('.overlay').removeClass('active');
+        //   var focusClass = $(".sidebar-header.mt-form-close").data( 'focus' );
+        //         $( '.' + focusClass ).find( 'a' ).focus();
+        // });
+
+        // $('.menu-btn').on('click', function () {
+        //   $('.offcanvas__block').addClass('active');
+        //   $('.overlay').addClass('active');
+        // });
+
+        
         
         //Focus trap in popup.
      

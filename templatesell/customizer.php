@@ -28,7 +28,7 @@ if ( !function_exists('intimate_default_theme_options_values') ) :
             'intimate_header_image_height'=> '100',
 
            /*Header Options*/
-            'intimate_enable_offcanvas'  => 0,
+            'intimate_enable_offcanvas'  => 1,
             'intimate_enable_search'  => 0,
             'intimate_enable_header_ads'=> 1,
             'intimate-header-ads-image'=>'',

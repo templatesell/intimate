@@ -14,12 +14,14 @@
 get_header();
 ?>
 <section id="content" class="site-content posts-container">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-			<div class="breadcrumbs-wrap">
-				<?php do_action('intimate_breadcrumb_options_hook'); ?> <!-- Breadcrumb hook -->
+        	<div class="col-lg-12">
+				<div class="breadcrumbs-wrap">
+					<?php do_action('intimate_breadcrumb_options_hook'); ?> <!-- Breadcrumb hook -->
+				</div>
 			</div>
-			<div id="primary" class="col-md-8 content-area">
+			<div id="primary" class="col-lg-9 col-md-7 col-sm-12 content-area">
 				<main id="main" class="site-main">
 				<?php
 				while ( have_posts() ) :

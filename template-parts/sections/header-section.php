@@ -151,45 +151,45 @@ $enable_main_trending = absint($intimate_theme_options['intimate_enable_trending
 				<div class="col-lg-2 col-3 align-self-center">
 					<div class="menu_right">
 						<?php if( 1 == $offcanvas ){ ?>
-						<button type="button" class="menu-btn">
+						<a class="canvas-btn" href="javascript:void(0)">
 							<span></span>
 							<span></span>
 							<span></span>
-						</button>
+						</a>
 						<?php } ?>
 						<!-- Offcanvas Start-->
 						<?php if( 1 == $offcanvas ){ ?>
 							<div class="offcanvas__wrapper">
-								<div  class="offcanvas__block">
-									<button class="close-btn">
-										<span></span>
-										<span></span>
-									</button>
-									<?php if ( is_active_sidebar('offcanvas') ) { ?>
-										<div class="offcanvas-sidebar-area">
-											<?php dynamic_sidebar('offcanvas'); ?>
-										</div>
-									<?php }else{ ?>	
-									<div class="default-widgets">
-										<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-										<div class="widget widget_categories">
-											<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'intimate' ); ?></h2>
-											<ul>
-												<?php
-												wp_list_categories( array(
-													'orderby'    => 'count',
-													'order'      => 'DESC',
-													'show_count' => 1,
-													'title_li'   => '',
-													'number'     => 10,
-												) );
-												?>
-											</ul>
-										</div>
-									</div>
-									<?php } ?>
+								<div class="canvas-header close-btn" data-focus="canvas-btn">
+									<a href="javascript:void(0)"><i class="fa fa-close"></i></a>
 								</div>
-								<div class="overlay"></div>
+								<div  class="canvas-header offcanvas__block">
+									<div class="canvas-header-block">
+										<?php if ( is_active_sidebar('offcanvas') ) { ?>
+											<div class="offcanvas-sidebar-area">
+												<?php dynamic_sidebar('offcanvas'); ?>
+											</div>
+										<?php }else{ ?>	
+										<div class="default-widgets">
+											<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+											<div class="widget widget_categories">
+												<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'intimate' ); ?></h2>
+												<ul>
+													<?php
+													wp_list_categories( array(
+														'orderby'    => 'count',
+														'order'      => 'DESC',
+														'show_count' => 1,
+														'title_li'   => '',
+														'number'     => 10,
+													) );
+													?>
+												</ul>
+											</div>
+										</div>
+										<?php } ?>
+									</div>
+								</div>
 							</div>
 						<?php } ?>
 						<!-- Offcanvas End-->

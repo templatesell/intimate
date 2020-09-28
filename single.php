@@ -11,10 +11,12 @@ get_header();
 <section id="content" class="site-content posts-container">
     <div class="container-fluid">
         <div class="row">
-			<div class="breadcrumbs-wrap">
-				<?php 
-				// Breadcrumb hook
-				do_action('intimate_breadcrumb_options_hook'); ?> 
+        	<div class="col-lg-12">
+				<div class="breadcrumbs-wrap">
+					<?php 
+					// Breadcrumb hook
+					do_action('intimate_breadcrumb_options_hook'); ?> 
+				</div>
 			</div>
 			<div id="primary" class="col-lg-9 col-md-9 col-sm-8 content-area">
 				<main id="main" class="site-main">
@@ -33,23 +35,6 @@ get_header();
 				</main><!-- #main -->
 			</div><!-- #primary -->
 			<?php get_sidebar(); ?>
-		</div>
-	</div>
-</section>
-<section class="">
-    <div class="container">
-        <div class="row">
-        	<div class="col-sm-12">
-				<?php 
-				/**
-				 * intimate_related_posts hook
-				 * @since Intimate 1.0.0
-				 *
-				 * @hooked intimate_related_posts -  10
-				 */
-				do_action( 'intimate_related_posts' ,get_the_ID() );
-				?>
-			</div>
 		</div>
 	</div>
 </section>

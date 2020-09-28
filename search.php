@@ -10,7 +10,7 @@
 get_header();
 ?>
 <section id="content" class="site-content posts-container">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
 			<div class="archive-heading">
 				<h1 class="archive-title">
@@ -25,7 +25,7 @@ get_header();
 				// breadcrumb hook
 				do_action('intimate_breadcrumb_options_hook'); ?> 
 			</div>
-			<div id="primary" class="col-md-8 content-area">
+			<div id="primary" class="col-lg-9 col-md-7 col-sm-12 content-area">
 				<main id="main" class="site-main">
 					<?php if ( have_posts() ) : ?>
 					<?php
