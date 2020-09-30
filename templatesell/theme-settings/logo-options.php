@@ -29,7 +29,7 @@ $wp_customize->add_setting('intimate_options[intimate-logo-position]', array(
 
 $wp_customize->add_control('intimate_options[intimate-logo-position]', array(
     'choices' => array(
-        'default-logo' => __('Center Logo', 'intimate'),
+        'center-logo' => __('Center Logo', 'intimate'),
         'left-logo' => __('Left Logo', 'intimate'),
     ),
     'label' => __('Logo Position in Header', 'intimate'),

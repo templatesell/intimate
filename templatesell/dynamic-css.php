@@ -31,6 +31,7 @@ if (!function_exists('intimate_dynamic_css')) :
             $custom_css .= "
             #toTop,
             .card__post__category a,
+            .slide-wrap .caption .post-category,
             .intimate-home-icon a,
             span.menu-description,
             a.effect:before,

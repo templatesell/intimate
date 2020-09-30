@@ -42,7 +42,7 @@
             slidesToShow: 1,
     		slidesToScroll: 1,
     		autoplay: true,
-			autoplaySpeed: 1000,
+			autoplaySpeed: 5000,
 			dots: false,
 			prevArrow:
 			'<button type="button" class="slick-prev"><span class="fa fa-angle-left"></span></button>',

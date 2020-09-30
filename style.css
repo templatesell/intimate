@@ -740,6 +740,7 @@ th {
     padding: 2px 10px;
     display: inline-block;
     vertical-align: top;
+    white-space: nowrap;
 }
 .trending-news .trending-news-inner .trending-news-slider .slick-arrow {
     position: absolute;
@@ -1307,6 +1308,9 @@ th {
     -o-box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.1);
     box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.1);
 }
+.menu-description{
+    display: none;
+}
 
 /* =============================================
 ##Intimate queries for responsive design
@@ -1383,8 +1387,9 @@ th {
         background: #f92a28;
         line-height: 12px;
         padding: 2px 5px;
-        right: 0;
+        right: -10px;
         color: #fff;
+        display: block;
     }
     span.menu-description:before {
         content: " ";
@@ -1916,6 +1921,22 @@ div#MobileMenu {
         top: 190%;
     }
 }
+
+/*LOGO OPTIONS*/
+.center-logo [class*="col-"] {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+.header-1 .head_one.center-logo .logo{
+    margin: auto;
+    padding-bottom: 25px;
+}
+.header-1 .head_one.center-logo .logo h1{
+    font-size: 50px;
+}
 /*==============================================================
 ## Main Banner CSS
 ================================================================*/
@@ -1933,7 +1954,7 @@ div#MobileMenu {
 .slide-wrap img{
     max-width: 100%;
     width: 100%;
-    height: 480px;
+    height: 446px;
     -o-object-fit: cover;
     object-fit: cover;
     position: relative;
@@ -5711,7 +5732,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
     object-fit: cover;
     width: 100%;
     max-width: 100%;
-    height: 240px;
+    height: 223px;
     position: relative;
 }
 .no-image-grid,
@@ -7382,6 +7403,9 @@ div#intimate-breadcrumbs {
     }
     .single.single-left-sidebar #primary, .single.single-right-sidebar #primary{
         max-width: 100%;
+    }
+    .text-right{
+        text-align: initial;
     }
 
 }

@@ -13,7 +13,7 @@ if ( !function_exists('intimate_default_theme_options_values') ) :
 
             /*Logo Options*/
             'intimate_logo_width_option' => '600',
-            'intimate-logo-position'=>'default-logo',
+            'intimate-logo-position'=>'left-logo',
 
             /*Top Header*/
             'intimate_enable_top_header'=> 0, 

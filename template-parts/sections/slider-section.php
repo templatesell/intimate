@@ -144,7 +144,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                     if ( $p_the_query->have_posts()):
                     while($p_the_query->have_posts())
                       : $p_the_query->the_post(); ?>
-                  <div class="card__post card__post-list py-3">
+                  <div class="card__post card__post-list py-2">
                       <?php if(has_post_thumbnail()){ ?>
                       <div class="image-sm my-auto">
                         <a href="<?php the_permalink();?>">
@@ -194,7 +194,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                     while($t_the_query->have_posts())
                       : $t_the_query->the_post(); ?>
                 <!-- Post Article -->
-                <div class="card__post card__post-list py-3">
+                <div class="card__post card__post-list py-2">
                     <?php if(has_post_thumbnail()){ ?>
                       <div class="image-sm my-auto">
                         <a href="<?php the_permalink();?>">
@@ -243,7 +243,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                     while($t_the_query->have_posts())
                       : $t_the_query->the_post(); ?>
                 <!-- Post Article -->
-                <div class="card__post card__post-list py-3">
+                <div class="card__post card__post-list py-2">
                     <?php if(has_post_thumbnail()){ ?>
                       <div class="image-sm my-auto">
                         <a href="<?php the_permalink();?>">

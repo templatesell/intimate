@@ -90,11 +90,11 @@ $logo_position = esc_attr($intimate_theme_options['intimate-logo-position']);
 	$header_class = ($header_image == "") ? '' : 'header-image';
 	?>
 	<section class="main-header <?php echo esc_attr($header_class); ?>" style="background-image:url(<?php echo esc_url($header_image) ?>); background-size: cover; background-position: center; background-repeat: no-repeat;">
-		<div class="head_one clearfix">
+		<div class="head_one clearfix <?php echo esc_attr($logo_position);?>">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-4 align-self-center">
-						<div class="logo <?php echo esc_attr($logo_position);?>">
+						<div class="logo ">
 							<?php
 							the_custom_logo();
 							if ( is_front_page() && is_home() ) :
