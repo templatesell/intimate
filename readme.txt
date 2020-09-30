@@ -5,7 +5,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 4.5
 Requires PHP: 4.7
 Tested up to: 5.5
-Stable tag: 1.2.0
+Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,10 @@ Intimate includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.1 - September 30 2020 =
+* Fixed some CSS issues
+* Fixed responsive issues
+
 = 1.0.0 - September 22 2020 =
 * Initial release
 

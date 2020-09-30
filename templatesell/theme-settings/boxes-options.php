@@ -56,6 +56,7 @@ $wp_customize->add_control( 'intimate_options[intimate_highlights_title]', array
     'settings'  => 'intimate_options[intimate_highlights_title]',
     'type'      => 'text',
     'priority'  => 5,
+    'active_callback'=>'intimate_promo_active_callback'
 
 ) );
 

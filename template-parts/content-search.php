@@ -6,10 +6,8 @@
  *
  * @package Intimate
  */
-global $intimate_theme_options;
-$masonry = esc_attr($intimate_theme_options['intimate-column-blog-page']);
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class($masonry); ?> >
+<article id="post-<?php the_ID(); ?>" >
     <div class="post-wrap">
         <?php if(has_post_thumbnail()) { ?>
             <div class="post-media">

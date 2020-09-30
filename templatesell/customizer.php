@@ -79,10 +79,10 @@ if ( !function_exists('intimate_default_theme_options_values') ) :
 
 
             /*Sticky Sidebar*/
-            'intimate-enable-sticky-sidebar' => 0,
+            'intimate-enable-sticky-sidebar' => 1,
 
             /*Footer Section*/
-            'intimate-footer-copyright'  => esc_html__('Copyright All Right Reserved 2020','intimate'),
+            'intimate-footer-copyright'  => esc_html__('Copyright All Rights Reserved 2020','intimate'),
 
             /*Breadcrumb Options*/
             'intimate-extra-breadcrumb' => 1,
@@ -148,6 +148,21 @@ function intimate_customize_register( $wp_customize ) {
         $intimate_home_section->panel = 'intimate_front_page';
         $intimate_home_section->title = esc_html__( 'Front Page Widgets', 'intimate' );
         $intimate_home_section->priority = 25;
+    }
+    /*Getting After Slider Widget Area*/
+    $intimate_below_slider_section = $wp_customize->get_section( 'sidebar-widgets-below-slider-area' );
+    if ( ! empty( $intimate_below_slider_section ) ) {
+        $intimate_below_slider_section->panel = 'intimate_front_page';
+        $intimate_below_slider_section->title = esc_html__( 'Widget Area Below Slider', 'intimate' );
+        $intimate_below_slider_section->priority = 24;
+    }
+
+    /*Getting After Slider Widget Area*/
+    $intimate_before_footer_section = $wp_customize->get_section( 'sidebar-widgets-before-footer-area' );
+    if ( ! empty( $intimate_before_footer_section ) ) {
+        $intimate_before_footer_section->panel = 'intimate_front_page';
+        $intimate_before_footer_section->title = esc_html__( 'Widget Area Before Footer', 'intimate' );
+        $intimate_before_footer_section->priority = 26;
     }
 
 }

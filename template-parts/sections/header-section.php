@@ -20,6 +20,7 @@ $ads_link = esc_url($intimate_theme_options['intimate-header-ads-image-link']);
 $offcanvas = absint($intimate_theme_options['intimate_enable_offcanvas']);
 $search_header = absint($intimate_theme_options['intimate_enable_search']);
 $enable_main_trending = absint($intimate_theme_options['intimate_enable_trending_news_big']);
+$logo_position = esc_attr($intimate_theme_options['intimate-logo-position']);
 ?>
 
 <header class="header-1">
@@ -93,7 +94,7 @@ $enable_main_trending = absint($intimate_theme_options['intimate_enable_trending
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-4 align-self-center">
-						<div class="logo">
+						<div class="logo <?php echo esc_attr($logo_position);?>">
 							<?php
 							the_custom_logo();
 							if ( is_front_page() && is_home() ) :
