@@ -29,8 +29,13 @@ if (!function_exists('intimate_dynamic_css')) :
         //Primary  Background 
         if (!empty($intimate_primary_color)) {
             $custom_css .= "
-            #toTop:hover,
+            #toTop,
+            .card__post__category a,
+            .intimate-home-icon a,
+            span.menu-description,
             a.effect:before,
+            .widget .widget-title:before, 
+            .widget .widgettitle:before,
             .show-more,
             a.link-format,
             .tabs-nav li:before,
@@ -56,9 +61,14 @@ if (!function_exists('intimate_dynamic_css')) :
         //Primary Color
         if (!empty($intimate_primary_color)) {
             $custom_css .= "
+            a:hover,
+            .post__grid .cat-links a,
+            .card__post__author-info .cat-links a,
             .main-header a:hover, 
             .main-header a:focus, 
             .main-header a:active,
+            .post-cats > span i, 
+            .post-cats > span a,
             .top-menu > ul > li > a:hover,
             .main-menu ul li.current-menu-item > a, 
             .header-2 .main-menu > ul > li.current-menu-item > a,
@@ -88,6 +98,13 @@ if (!function_exists('intimate_dynamic_css')) :
             .site-footer a:hover, 
             .site-footer a:focus, .content-area p a{ 
                 color : ". $intimate_primary_color."; 
+            }";
+        }
+        // Border Color
+        if (!empty($intimate_primary_color)) {
+            $custom_css .= "
+            span.menu-description:before{ 
+                border-color: transparent  ".$intimate_primary_color."; 
             }";
         }
 

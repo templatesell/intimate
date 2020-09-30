@@ -2695,7 +2695,6 @@ a.effect:active {
 }
 .post-cats > span a:hover,
 .post-cats > span a:focus{
-    color: #d42929;
     text-decoration: underline !important;
 }
 .post-cats > span.tags-links{
@@ -4312,7 +4311,6 @@ article{
 
 /* widget container */
 .widget {
-    overflow: hidden;
     word-wrap: break-word;
     margin-bottom: 40px;
     font-size: 15px;
@@ -5759,7 +5757,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 .card__post__body .bg__post-cover .card__post__title h5 a,
 .card__post__body .bg__post-cover .card__post__author-info span,
 .card__post__body .bg__post-cover .card__post__author-info a {
-    color: #fff;
+    color: #fff!important;
 }
 .bg__post-cover .card__post__text{
     color: #fff;
@@ -5777,6 +5775,33 @@ ul.social-menu li a[href*="dribble.com"]:before {
 }
 
 /*highlights*/
+.title-highlight {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+.title-highlight:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 4px;
+    background: #d42929;
+    z-index: 1;
+    margin-left: -50px;
+}
+.title-highlight:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 200px;
+    height: 4px;
+    background: #eee;
+    margin-left: -100px;
+}
 .news__highlight{
     margin-left: -1rem;
     margin-right: -1rem;
@@ -6121,7 +6146,7 @@ div[class*="footer-col-"]:last-child {
     color: #fff;
 }
 .site-footer a {
-    color: #d42929;
+    color: #a2a2a2;
 }
 .site-footer a:hover,
 .site-footer a:focus {
@@ -6204,17 +6229,10 @@ div[class*="footer-col-"]:last-child {
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-#toTop:focus {
-    color: #4c4f53;
-}
 #toTop:hover {
-    color: #ffffff;
-    background-color: #d42929;
+    opacity: 0.9;
 }
-#toTop:active i {
-    position: relative;
-    top: 1px;
-}
+
 
 
 /***
