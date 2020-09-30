@@ -18,7 +18,9 @@ get_header();
 					do_action('intimate_breadcrumb_options_hook'); ?> 
 				</div>
 			</div>
-			<div id="primary" class="col-lg-9 col-md-9 col-sm-8 content-area">
+		</div>
+		<div class="row">
+			<div id="primary" class="col-lg-9 col-md-8 col-sm-12 content-area">
 				<main id="main" class="site-main">
 					<?php
 						while ( have_posts() ) :
@@ -34,7 +36,9 @@ get_header();
 			        ?>
 				</main><!-- #main -->
 			</div><!-- #primary -->
-			<?php get_sidebar(); ?>
+			<aside id="secondary" class="col-lg-3 col-md-4 col-sm-12 widget-area side-right">
+				<?php get_sidebar(); ?>
+			</aside><!-- #secondary -->
 		</div>
 	</div>
 </section>

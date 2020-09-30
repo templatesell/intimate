@@ -81,7 +81,7 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
         <footer class="site-footer">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6 align-self-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 align-self-center">
                         <div class="copyright">
                             <?php echo $copyright; ?>
                             <?php
@@ -90,7 +90,7 @@ if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active
                             ?>
                         </div>
                     </div>
-                    <div class="col-md-6 align-self-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 align-self-center order">
                             <?php
                             if (has_nav_menu('footer')) {
                                 wp_nav_menu( array(

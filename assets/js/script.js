@@ -56,9 +56,5 @@
 
         $('.dropdown_menu a').append('<span></span>');
     }
-
-
-   
-
     
 })(jQuery);

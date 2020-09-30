@@ -28,7 +28,7 @@ $enable_main_trending = absint($intimate_theme_options['intimate_enable_trending
 			<div class="container-fluid">
 				<div class="row">
 					<?php if( $enable_trending == 1 ) { ?>
-						<div class="col-lg-8 col-md-8 col-sm-6 align-self-center">
+						<div class="col-lg-8 col-md-7 col-sm-6 align-self-center">
 							<div class="trending-news">
 								<div class="trending-news-inner">
 		                            <div class="title">
@@ -60,7 +60,7 @@ $enable_main_trending = absint($intimate_theme_options['intimate_enable_trending
 		                    </div>
 		                </div>
 					<?php } ?>
-					<div class="col-lg-4 col-md-4 col-sm-6 align-self-center">
+					<div class="col-lg-4 col-md-5 col-sm-6 align-self-center">
 						<div class="top_date_social text-right">
 							<?php if( $enable_date == 1 ) { ?>
 								<div class="today-date">

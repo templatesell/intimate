@@ -31,7 +31,9 @@ get_header();
             </main><!-- #main -->
         </div><!-- #primary -->
 
-        <?php get_sidebar(); ?>
+        <aside id="secondary" class="col-lg-3 col-md-5 col-sm-12 widget-area side-right">
+            <?php get_sidebar(); ?>
+        </aside><!-- #secondary -->
     </div> <!-- .front-page-content-wrapper -->
 </div>
 </section>
