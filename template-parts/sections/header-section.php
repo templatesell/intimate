@@ -29,7 +29,7 @@ $logo_position = esc_attr($intimate_theme_options['intimate-logo-position']);
 			<div class="container-fluid">
 				<div class="row">
 					<?php if( $enable_trending == 1 ) { ?>
-						<div class="col-lg-8 col-md-7 col-sm-6 align-self-center">
+						<div class="col-lg-8 col-md-12 col-sm-12 align-self-center">
 							<div class="trending-news">
 								<div class="trending-news-inner">
 		                            <div class="title">
@@ -61,7 +61,7 @@ $logo_position = esc_attr($intimate_theme_options['intimate-logo-position']);
 		                    </div>
 		                </div>
 					<?php } ?>
-					<div class="col-lg-4 col-md-5 col-sm-6 align-self-center">
+					<div class="col-lg-4 col-md-12 col-sm-12 align-self-center">
 						<div class="top_date_social text-right">
 							<?php if( $enable_date == 1 ) { ?>
 								<div class="today-date">
@@ -128,10 +128,12 @@ $logo_position = esc_attr($intimate_theme_options['intimate-logo-position']);
 	</setion><!-- #masthead -->
 	<div class="menu-area">
 		<div class="container-fluid">
-			<div class="row justify-content-between">					
-				<nav id="site-navigation" class="col-lg-10 col-9 align-self-center">
+			<div class="row justify-content-between relative">					
+				<nav id="site-navigation" class="col-lg-10 col-12 align-self-center">
 					<button class="bar-menu">
-						<i class="fa fa-bars" aria-hidden="true"></i> <?php _e('Menu', 'intimate'); ?>
+						<span></span>
+						<span></span>
+						<span></span>
 					</button>
 					<div class="intimate-home-icon">
 						<a href="<?php echo esc_url(home_url('/')); ?>">
@@ -149,7 +151,7 @@ $logo_position = esc_attr($intimate_theme_options['intimate-logo-position']);
 						?>
 					</div>
 				</nav><!-- #site-navigation -->
-				<div class="col-lg-2 col-3 align-self-center">
+				<div class="col-lg-2 col-5 align-self-center mob-right">
 					<div class="menu_right">
 						<?php if( 1 == $offcanvas ){ ?>
 						<a class="canvas-btn" href="javascript:void(0)">

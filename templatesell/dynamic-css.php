@@ -30,6 +30,9 @@ if (!function_exists('intimate_dynamic_css')) :
         if (!empty($intimate_primary_color)) {
             $custom_css .= "
             #toTop,
+            .trending-news .trending-news-inner .title,
+            .tab__wrapper .tabs-nav li,
+            .title-highlight:before,
             .card__post__category a,
             .slide-wrap .caption .post-category,
             .intimate-home-icon a,
@@ -76,10 +79,6 @@ if (!function_exists('intimate_dynamic_css')) :
             .main-menu ul li:hover > a,
             .post-navigation .nav-links a:hover, 
             .post-navigation .nav-links a:focus,
-            .tabs-nav li.tab-active a, 
-            .tabs-nav li.tab-active,
-            .tabs-nav li.tab-active a, 
-            .tabs-nav li.tab-active,
             ul.trail-items li a:hover span,
             .author-socials a:hover,
             .post-date a:focus, 
