@@ -33,18 +33,6 @@
             }
         });
     });
-        
-        // $('.close-btn, .overlay').on('click', function () {
-        //   $('.offcanvas__block').removeClass('active');
-        //   $('.overlay').removeClass('active');
-        //   var focusClass = $(".sidebar-header.mt-form-close").data( 'focus' );
-        //         $( '.' + focusClass ).find( 'a' ).focus();
-        // });
-
-        // $('.menu-btn').on('click', function () {
-        //   $('.offcanvas__block').addClass('active');
-        //   $('.overlay').addClass('active');
-        // });
 
         
         
