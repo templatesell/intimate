@@ -6,8 +6,10 @@
  *
  * @package Intimate
  */
+global $intimate_theme_options;
+$category = absint($intimate_theme_options['intimate-show-hide-category']);
 ?>
-<article id="post-<?php the_ID(); ?>" >
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="post-wrap">
         <?php if(has_post_thumbnail()) { ?>
             <div class="post-media">
@@ -15,8 +17,17 @@
             </div>
         <?php } ?>
         <div class="post-content">
+            <?php if($category == 1 ){ ?>
+                <div class="post-cats">
+                    <?php intimate_entry_meta(); ?>
+                </div>
+            <?php } ?>
+
             <div class="date_title">
-                <div class="post-date">
+                
+                <?php the_title(sprintf('<h5 class="post-title entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h5>'); ?>
+            </div>
+            <div class="post-date">
                     <?php if ('post' === get_post_type()) : ?>
                         <div class="entry-meta">
                             <?php
@@ -26,8 +37,6 @@
                         </div><!-- .entry-meta -->
                     <?php endif; ?>
                 </div>
-                <?php the_title(sprintf('<h2 class="post-title entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
-            </div>
             <div class="post-excerpt entry-summary">
                 <?php the_excerpt(); ?>
             </div><!-- .entry-summary -->

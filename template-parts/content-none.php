@@ -7,7 +7,7 @@
  * @package Intimate
  */
 ?>
-<section class="no-results not-found">
+<section class="no-results not-found col-12">
     <div class="page-content">
         <h1 class="page-title"><?php esc_html_e('Nothing Found', 'intimate'); ?></h1>
         <?php

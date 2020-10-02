@@ -2146,7 +2146,7 @@ div#MobileMenu {
 .archive-description p:last-child {
     margin-bottom: 0;
 }
-
+.search .site-main,
 .archive .site-main{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2156,6 +2156,7 @@ div#MobileMenu {
     margin-right: -15px;
     margin-left: -15px;
 }
+.search .content-area article,
 .archive .content-area article{
     position: relative;
     width: 100%;
@@ -7455,6 +7456,7 @@ div#intimate-breadcrumbs {
     .latest__post .card__post .card__post__body img{
         height: 300px;
     }
+    .search .content-area article,
     .archive .content-area article,
     .intimate_front_loop_block article {
         -ms-flex: 0 0 100%;

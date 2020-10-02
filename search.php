@@ -12,18 +12,20 @@ get_header();
 <section id="content" class="site-content posts-container">
     <div class="container-fluid">
         <div class="row">
-			<div class="archive-heading">
-				<h1 class="archive-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'intimate' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</div>
-			<div class="breadcrumbs-wrap">
-				<?php 
-				// breadcrumb hook
-				do_action('intimate_breadcrumb_options_hook'); ?> 
+        	<div class="col-lg-12">
+				<div class="archive-heading">
+					<h1 class="archive-title">
+						<?php
+						/* translators: %s: search query. */
+						printf( esc_html__( 'Search Results for: %s', 'intimate' ), '<span>' . get_search_query() . '</span>' );
+						?>
+					</h1>
+				</div>
+				<div class="breadcrumbs-wrap">
+					<?php 
+					// breadcrumb hook
+					do_action('intimate_breadcrumb_options_hook'); ?> 
+				</div>
 			</div>
 			<div id="primary" class="col-lg-9 col-md-7 col-sm-12 content-area">
 				<main id="main" class="site-main">
