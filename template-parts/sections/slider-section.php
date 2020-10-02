@@ -124,13 +124,62 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
       <div class="col-lg-3 col-md-5 col-sm-12">
         <div class="tab__wrapper">
           <ul id="tab_first" class="tabs-nav">
-              <li class="current" data-tab="TB1"><button><i class="fa fa-fire"></i><?php esc_html_e('Popular', 'intimate'); ?></a></li>
-              
-              <li data-tab="TB2"><button><i class="fa fa-clock-o"></i><?php esc_html_e('Recent', 'intimate'); ?></button></li>
+
+            <li class="current" data-tab="TB2"><button><i class="fa fa-clock-o"></i><?php esc_html_e('Recent', 'intimate'); ?></button></li>
+
+              <li data-tab="TB1"><button><i class="fa fa-fire"></i><?php esc_html_e('Popular', 'intimate'); ?></a></li>
               
               <li data-tab="TB3"><button><i class="fa fa-random"></i><?php esc_html_e('Trending', 'intimate'); ?></button></li>
           </ul>
           <div class="tab-content">
+            <div id="TB2" class="tab-block">
+              <?php 
+                      $t_args = array(
+                        'post_type' => 'post',
+                        'posts_per_page'=> 4,
+                    );
+                    // the query
+                    $t_the_query = new WP_Query( $t_args ); 
+                    if ( $t_the_query->have_posts()):
+                    while($t_the_query->have_posts())
+                      : $t_the_query->the_post(); ?>
+                <!-- Post Article -->
+                <div class="card__post card__post-list py-2">
+                    <?php if(has_post_thumbnail()){ ?>
+                      <div class="image-sm my-auto">
+                        <a href="<?php the_permalink();?>">
+                          <?php the_post_thumbnail('thumbnail'); ?>
+                        </a>
+                      </div>
+                      <?php }else{  ?>
+                        <div class="no-image"></div>
+                      <?php } ?>
+                    <div class="card__post__body my-auto">
+                        <div class="card__post__content">
+                              <div class="card__post__author-info mb-1">
+                                  <ul class="list-inline cat-links">
+                                      <li class="list-inline-item">
+                                          <?php
+                                          $categories = get_the_category();
+                                          if ( ! empty( $categories ) ) {
+                                            echo '<a href="'.esc_url( get_category_link( $categories[0]->term_id ) ).'">'.esc_html( $categories[0]->name ).'</a>';
+                                            }                                 
+                                          ?>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="card__post__title">
+                                  <h6 class="mb-1">
+                                      <a href="<?php the_permalink(); ?>">
+                                          <?php the_title(); ?>
+                                      </a>
+                                  </h6>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+                 <?php endwhile; wp_reset_postdata(); endif; ?>
+            </div>
             <div id="TB1" class="tab-block current">
                 <!-- Post Article -->
                 <?php 
@@ -181,55 +230,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                   </div>
                 <?php endwhile; wp_reset_postdata(); endif; ?>
             </div> 
-            <div id="TB2" class="tab-block">
-              <?php 
-                      $t_args = array(
-                        'post_type' => 'post',
-                        'posts_per_page'=> 4,
-                        'cat'=> $trending_id,
-                    );
-                    // the query
-                    $t_the_query = new WP_Query( $t_args ); 
-                    if ( $t_the_query->have_posts()):
-                    while($t_the_query->have_posts())
-                      : $t_the_query->the_post(); ?>
-                <!-- Post Article -->
-                <div class="card__post card__post-list py-2">
-                    <?php if(has_post_thumbnail()){ ?>
-                      <div class="image-sm my-auto">
-                        <a href="<?php the_permalink();?>">
-                          <?php the_post_thumbnail('thumbnail'); ?>
-                        </a>
-                      </div>
-                      <?php }else{  ?>
-                        <div class="no-image"></div>
-                      <?php } ?>
-                    <div class="card__post__body my-auto">
-                        <div class="card__post__content">
-                              <div class="card__post__author-info mb-1">
-                                  <ul class="list-inline cat-links">
-                                      <li class="list-inline-item">
-                                          <?php
-                                          $categories = get_the_category();
-                                          if ( ! empty( $categories ) ) {
-                                            echo '<a href="'.esc_url( get_category_link( $categories[0]->term_id ) ).'">'.esc_html( $categories[0]->name ).'</a>';
-                                            }                                 
-                                          ?>
-                                      </li>
-                                  </ul>
-                              </div>
-                              <div class="card__post__title">
-                                  <h6 class="mb-1">
-                                      <a href="<?php the_permalink(); ?>">
-                                          <?php the_title(); ?>
-                                      </a>
-                                  </h6>
-                              </div>
-                          </div>
-                    </div>
-                </div>
-                 <?php endwhile; wp_reset_postdata(); endif; ?>
-            </div>
+            
             <div id="TB3" class="tab-block">
               <?php 
                       $t_args = array(
