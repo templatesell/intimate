@@ -124,14 +124,14 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
       <div class="col-lg-3 col-md-5 col-sm-12">
         <div class="tab__wrapper">
           <ul id="tab_first" class="tabs-nav">
-              <li class="tab-active"><a data-toggle="tab" href="#TB1"><i class="fa fa-fire"></i><?php esc_html_e('Popular', 'intimate'); ?></a></li>
+              <li class="current" data-tab="TB1"><button><i class="fa fa-fire"></i><?php esc_html_e('Popular', 'intimate'); ?></a></li>
               
-              <li class=""><a data-toggle="tab" href="#TB2"><i class="fa fa-clock-o"></i><?php esc_html_e('Recent', 'intimate'); ?></a></li>
+              <li data-tab="TB2"><button><i class="fa fa-clock-o"></i><?php esc_html_e('Recent', 'intimate'); ?></button></li>
               
-              <li class=""><a data-toggle="tab" href="#TB3"><i class="fa fa-random"></i><?php esc_html_e('Trending', 'intimate'); ?></a></li>
+              <li data-tab="TB3"><button><i class="fa fa-random"></i><?php esc_html_e('Trending', 'intimate'); ?></button></li>
           </ul>
-          <div class="tab-content tab-content_1">
-            <div id="TB1" class="active">
+          <div class="tab-content">
+            <div id="TB1" class="tab-block current">
                 <!-- Post Article -->
                 <?php 
                       $p_args = array(
@@ -181,7 +181,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                   </div>
                 <?php endwhile; wp_reset_postdata(); endif; ?>
             </div> 
-            <div id="TB2">
+            <div id="TB2" class="tab-block">
               <?php 
                       $t_args = array(
                         'post_type' => 'post',
@@ -230,7 +230,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                 </div>
                  <?php endwhile; wp_reset_postdata(); endif; ?>
             </div>
-            <div id="TB3">
+            <div id="TB3" class="tab-block">
               <?php 
                       $t_args = array(
                         'post_type' => 'post',

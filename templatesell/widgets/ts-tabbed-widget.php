@@ -57,19 +57,25 @@ if (!class_exists('Intimate_Tabbed')) :
             
             <ul id="tab_second" class="tabs-nav">
                 <?php if(!empty($popular_title)){ ?>
-                <li class="tab-active"><a data-toggle="tab" href="#home"><i class="fa fa-fire"></i><?php echo esc_html($popular_title); ?></a></li>
+                <li class="current" data-tab="TAB1">
+                    <button><i class="fa fa-fire"></i><?php echo esc_html($popular_title); ?></button>
+                </li>
                 <?php } ?>
                 <?php if(!empty($recent_title)){ ?>
-                <li class=""><a data-toggle="tab" href="#menu1"><i class="fa fa-clock-o"></i><?php echo esc_html($recent_title); ?></a></li>
+                <li  data-tab="TAB2">
+                    <button><i class="fa fa-clock-o"></i><?php echo esc_html($recent_title); ?></button>
+                </li>
                 <?php } ?>
                 <?php if(!empty($random)){ ?>
-                <li class=""><a data-toggle="tab" href="#menu2"><i class="fa fa-random"></i><?php echo esc_html($random); ?></a></li>
+                <li data-tab="TAB3">
+                    <button><i class="fa fa-random"></i><?php echo esc_html($random); ?></button>
+                </li>
                 <?php } ?>
             </ul>
 
-            <div class="tab-content tab-content_2">
+            <div class="tab-content">
                 <?php if(!empty($popular_title)) { ?>
-                    <div id="home" class="active" style="display: block;">
+                    <div id="TAB1" class="tab-block current">
                         <section class="tab-posts-block">
                             <?php
                             $p_query_args = array(
@@ -100,7 +106,6 @@ if (!class_exists('Intimate_Tabbed')) :
                                             <?php
                                         }
                                         ?>
-                                        <span class="widget_featured_post_num"><?php echo $i; ?></span>
                                         <div class="widget_featured_content">
                                             <h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                             <div class="post-date">
@@ -118,7 +123,7 @@ if (!class_exists('Intimate_Tabbed')) :
                     </div>
                 <?php } ?>
                 <?php if(!empty($recent_title)) { ?>
-                    <div id="menu1" class="" style="display: none;">
+                    <div id="TAB2" class=" tab-block">
                         <section class="tab-posts-block">
                             <?php
                             $query_args = array(
@@ -163,7 +168,7 @@ if (!class_exists('Intimate_Tabbed')) :
                     </div>
                 <?php } ?>
                 <?php if(!empty($random)) { ?>
-                    <div id="menu2" class="" style="display: none;">
+                    <div id="TAB3" class="tab-block">
                         <section class="tab-posts-block">
                             <?php
                             $c_query_args = array(

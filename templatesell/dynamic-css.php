@@ -42,7 +42,7 @@ if (!function_exists('intimate_dynamic_css')) :
             .widget .widgettitle:before,
             .show-more,
             a.link-format,
-            .tabs-nav li:before,
+            .tabs-nav li.current,
             .post-slider-section .s-cat,
             .sidebar-3 .widget-title:after,
             .bottom-caption .slick-current .slider-items span,

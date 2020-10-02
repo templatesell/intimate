@@ -2094,7 +2094,7 @@ div#MobileMenu {
     background: #d42929;
     margin-right: 0;
 }
-.tab__wrapper .tabs-nav li a{
+.tab__wrapper .tabs-nav li button{
     color: #fff;
 }
 .tab__wrapper .tabs-nav{
@@ -2108,7 +2108,7 @@ div#MobileMenu {
     border-bottom: initial;
 }
 .tab__wrapper .card__post__title{
-    max-height: 50px;
+    max-height: 45px;
     overflow:hidden;
 }
 .tab__wrapper .image-sm {
@@ -4371,6 +4371,10 @@ article{
 }
 
 
+
+.sidebar-area h3 {
+    font-size: 18px;
+}
 /* widget container */
 .widget {
     word-wrap: break-word;
@@ -5579,7 +5583,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 }
 .widget_featured_content h4{
     margin-bottom: 0;
-    font-size: 17px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: 1.2;
@@ -5641,7 +5645,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 .tabs-nav  li:last-child{
     margin-right: 0;
 }
-.tabs-nav li.tab-active:before {
+.tabs-nav li.current:before {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -5649,17 +5653,14 @@ ul.social-menu li a[href*="dribble.com"]:before {
     height: 100%;
     background: rgb(0 0 0 / 8%);
     content: '';
-    opacity: 0;
+    opacity: 0.9;
     transition: all 0.9s ease;
     -webkit-transition: all 0.9s ease;
     -moz-transition: all 0.9s ease;
     -ms-transition: all 0.9s ease;
 }
-.tabs-nav li.tab-active:before {
-    opacity: 0.9;
-}
 
-.tabs-nav li a{
+.tabs-nav li button{
     position: relative;
     font-size: 13px;
     font-style: normal;
@@ -5669,9 +5670,22 @@ ul.social-menu li a[href*="dribble.com"]:before {
     white-space: nowrap;
     display: block;
     line-height: 40px;
+    border:0;
+    background: transparent;
+    width: 100%;
+    cursor: pointer;
 }
-.tabs-nav li a i{
+.tabs-nav li.current button{
+    color: #fff;
+}
+.tabs-nav li button i{
     padding-right: 5px;
+}
+.tab-content .tab-block{
+    display: none;
+}
+.tab-content .tab-block.current{
+    display: inherit;
 }
 
 /*==============================================================
@@ -5906,6 +5920,12 @@ ul.social-menu li a[href*="dribble.com"]:before {
   left: auto;
   right:30px;
 }
+.news__highlight .slick-dots{
+    bottom: 10px;
+}
+.news__highlight .slick-dots li.slick-active button {
+    background: #fff;
+}
 /*POST GRID*/
 .post__grid .card__post__title h5 a{
     color: #000000;
@@ -6014,7 +6034,10 @@ ul.social-menu li a[href*="dribble.com"]:before {
     height: 465px;
     position: relative;
 }
-
+.latest__post .card__post-list .card__post__title {
+    height: 50px;
+    overflow: hidden;
+}
 .grid__slider__carousel {
     margin-left: -1rem;
     margin-right: -1rem;

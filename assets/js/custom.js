@@ -156,7 +156,7 @@
 			    }
 			]
     	});
-    	$('#secondary .fetured__post__carousel, .footer-wrap .fetured__post__carousel').slick({
+    	$('#secondary .fetured__post__carousel, .footer-wrap .fetured__post__carousel, .slider-below-widget-wrapper .fetured__post__carousel').slick({
             slidesToShow: 1,
     		slidesToScroll: 1,
     		prevArrow:
@@ -186,6 +186,15 @@
 				  settings: {
 				    slidesToShow: 1,
 	        		slidesToScroll: 1,
+				  }
+				},
+				{
+				  breakpoint: 480,
+				  settings: {
+				    slidesToShow: 1,
+	        		slidesToScroll: 1,
+	        		arrows:false,
+	        		dots:true
 				  }
 				}
 			]
@@ -233,31 +242,53 @@
 			'<button type="button" class="slick-next"><span class="fa fa-angle-right"></span></button>',
 	    });
 
-	    // Change tab class and display content
-		$('#tab_first a').on('click', function (event) {
-		    event.preventDefault();
-		    $('.tab-active').removeClass('tab-active');
-		    $(this).parent().addClass('tab-active');
-		    $('.tab-content_1>div').hide();
-		    $($(this).attr('href')).show();
-		});
+	
+		$('#tab_first li').click(function(){
+			var tab_id = $(this).attr('data-tab');
 
-		$('#tab_first a:first').trigger('click'); // Default
+			$('#tab_first li').removeClass('current');
+			$('.tab-block').removeClass('current');
+
+			$(this).addClass('current');
+			$("#"+tab_id).addClass('current');
+		})
+
+		$('#tab_second li').click(function(){
+			var tab_id = $(this).attr('data-tab');
+
+			$('#tab_second li').removeClass('current');
+			$('.tab-block').removeClass('current');
+
+			$(this).addClass('current');
+			$("#"+tab_id).addClass('current');
+		})
+
+
+	    // Change tab class and display content
+		//$('#tab_first a').on('click', function (event) {
+		//     event.preventDefault();
+		//     $('.tab-active').removeClass('tab-active');
+		//     $(this).parent().addClass('tab-active');
+		//     $('.tab-content_1>div').hide();
+		//     $($(this).attr('href')).show();
+		// });
+
+		// $('#tab_first a:first').trigger('click'); // Default
 
 		// Change tab class and display content
-		$('#tab_second a').on('click', function (event) {
-		    event.preventDefault();
-		    $('.tab-active').removeClass('tab-active');
-		    $(this).parent().addClass('tab-active');
-		    $('.tab-content_2>div').hide();
-		    $($(this).attr('href')).show();
-		});
+		// $('#tab_second a').on('click', function (event) {
+		//     event.preventDefault();
+		//     $('.tab-active').removeClass('tab-active');
+		//     $(this).parent().addClass('tab-active');
+		//     $('.tab-content_2>div').hide();
+		//     $($(this).attr('href')).show();
+		// });
 
-		$('#tab_second a:first').trigger('click'); // Default
+		// $('#tab_second a:first').trigger('click'); // Default
 
-		$('.closebtn').on('click', function(){
-			t.close();
- 		});
+		// $('.closebtn').on('click', function(){
+		// 	t.close();
+ 	// 	});
  	}); 
 	//Loading
  	jQuery(window).load(function() {
