@@ -14,7 +14,7 @@ $date = absint($intimate_theme_options['intimate-show-hide-date']);
 $category = absint($intimate_theme_options['intimate-show-hide-category']);
 $author = absint($intimate_theme_options['intimate-show-hide-author']);
 ?>
-<article id="post-<?php the_ID(); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="post-wrap">
         <?php if(has_post_thumbnail()) { ?>
             <div class="post-media">

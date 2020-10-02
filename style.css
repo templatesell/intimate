@@ -2122,9 +2122,7 @@ div#MobileMenu {
 **/
 
 .archive-heading{
-    max-width: 500px;
     width: 100%;
-    padding: 0 15px;
 }
 .archive-title {
     margin: -7px 0 0;
@@ -2149,7 +2147,26 @@ div#MobileMenu {
     margin-bottom: 0;
 }
 
-
+.archive .site-main{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.archive .content-area article{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
 
 /***
 ====================================================================
@@ -2548,9 +2565,12 @@ object {
 
 .post-content {
     position: relative;
-    padding: 20px 0;
     word-wrap: break-word;
     overflow: hidden;
+    padding-bottom: 20px;
+}
+.has-post-thumbnail .post-content{
+    padding: 20px 0;
 }
 .post-content {
     padding-bottom: 25px;
@@ -7435,7 +7455,7 @@ div#intimate-breadcrumbs {
     .latest__post .card__post .card__post__body img{
         height: 300px;
     }
-
+    .archive .content-area article,
     .intimate_front_loop_block article {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
