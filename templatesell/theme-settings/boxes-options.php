@@ -13,7 +13,7 @@ $wp_customize->add_section( 'intimate_promo_section', array(
 if ( !function_exists('intimate_promo_active_callback') ) :
     function intimate_promo_active_callback(){
         global $intimate_theme_options;
-        $enable_promo = absint($intimate_theme_options['intimate_enable_promo']);
+        $enable_promo = absint($intimate_theme_options['intimate_enable_promo'])? absint($intimate_theme_options['intimate_enable_promo']): 0;
         if( 1 == $enable_promo ){
             return true;
         }

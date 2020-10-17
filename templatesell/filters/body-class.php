@@ -37,16 +37,3 @@ function intimate_body_class($classes)
     }
     return $classes;
 }
-
-/**
- * Filter to hide text Category from category page
- *
- * @since Intimate 1.0.9
- *
- */
-add_filter( 'get_the_archive_title', function ( $title ) {
-    if( is_category() ) {
-        $title = single_cat_title( '', false );
-    }
-    return $title;
-});

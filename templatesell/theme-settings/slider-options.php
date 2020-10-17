@@ -13,7 +13,7 @@ $wp_customize->add_section( 'intimate_slider_section', array(
 if ( !function_exists('intimate_slider_active_callback') ) :
   function intimate_slider_active_callback(){
       global $intimate_theme_options;
-      $enable_slider = absint($intimate_theme_options['intimate_enable_slider']);
+      $enable_slider = absint($intimate_theme_options['intimate_enable_slider'])? absint($intimate_theme_options['intimate_enable_slider']): 0;
       if( 1 == $enable_slider ){
           return true;
       }

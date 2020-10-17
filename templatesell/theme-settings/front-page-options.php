@@ -36,7 +36,7 @@ $wp_customize->add_control( 'intimate_options[intimate_enable_grid_post_front]',
 if ( !function_exists('intimate_grid_slider_active_callback') ) :
     function intimate_grid_slider_active_callback(){
         global $intimate_theme_options;
-        $enable_grid = absint($intimate_theme_options['intimate_enable_grid_post_front']);
+        $enable_grid = absint($intimate_theme_options['intimate_enable_grid_post_front'])? absint($intimate_theme_options['intimate_enable_grid_post_front']): 0;
         if( 1 == $enable_grid ){
             return true;
         }
@@ -121,7 +121,7 @@ $wp_customize->add_control( 'intimate_options[intimate_enable_missed_post_front]
 if ( !function_exists('intimate_you_may_missed_active_callback') ) :
     function intimate_you_may_missed_active_callback(){
         global $intimate_theme_options;
-        $enable_missed = absint($intimate_theme_options['intimate_enable_missed_post_front']);
+        $enable_missed = absint($intimate_theme_options['intimate_enable_missed_post_front'])? absint($intimate_theme_options['intimate_enable_missed_post_front']): 0;
         if( 1 == $enable_missed ){
             return true;
         }

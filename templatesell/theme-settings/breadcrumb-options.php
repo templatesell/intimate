@@ -9,8 +9,6 @@
             'panel'          => 'intimate_panel',
         ) );
 
-
-
         /*Breadcrumb Enable*/
         $wp_customize->add_setting( 'intimate_options[intimate-extra-breadcrumb]', array(
             'capability'        => 'edit_theme_options',

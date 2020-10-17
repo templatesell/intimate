@@ -12,7 +12,7 @@ $wp_customize->add_section( 'intimate_top_header_section', array(
 if ( !function_exists('intimate_header_active_callback') ) :
   function intimate_header_active_callback(){
       global $intimate_theme_options;
-      $enable_header = absint($intimate_theme_options['intimate_enable_top_header']);
+      $enable_header = absint($intimate_theme_options['intimate_enable_top_header'])? absint($intimate_theme_options['intimate_enable_top_header']) : 0;
       if( 1 == $enable_header ){
           return true;
       }
@@ -118,7 +118,7 @@ $wp_customize->add_control(
 if ( !function_exists('intimate_header_overlay_color_active_callback') ) :
   function intimate_header_overlay_color_active_callback(){
       global $intimate_theme_options;
-      $slider_overlay = absint($intimate_theme_options['intimate_enable_header_image_overlay']);
+      $slider_overlay = absint($intimate_theme_options['intimate_enable_header_image_overlay']) ? absint($intimate_theme_options['intimate_enable_header_image_overlay']): 0;
       if( $slider_overlay == 1 ){
           return true;
       }

@@ -113,7 +113,7 @@ $logo_position = esc_attr($intimate_theme_options['intimate-logo-position']);
 							<?php endif; ?>
 						</div><!-- .site-logo -->
 					</div>
-					<?php if($header_ads){ ?>
+					<?php if(!empty($header_ads)){ ?>
 						<div class="col-lg-8 align-self-center">
 							<div class="banner1">
 								<a href="<?php echo esc_url($ads_link);?>" target="_blank">

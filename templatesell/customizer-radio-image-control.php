@@ -13,7 +13,7 @@ if( ! class_exists( 'Intimate_Radio_Image_Control' ) ) {
 
     class Intimate_Radio_Image_Control extends WP_Customize_Control {
         
-        public $type = 'radio-image';
+        public $intimate_type = 'intimate-radio-image';
 
         public function render_content() {
             

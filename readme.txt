@@ -43,40 +43,40 @@ Intimate includes support for Infinite Scroll in Jetpack.
 Intimate is free WordPress theme by, Template Sell.
 Intimate is distributed under the terms of the GNU GPL v2 or later.
 
-
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
 * BreadcrumbTrail, Copyright (c) 2008 - 2015, Justin Tadlock http://themehybrid.com/plugins/breadcrumb-trail
 * Theia Sticky Sidebar https://github.com/WeCodePixels/theia-sticky-sidebar [MIT license]
+* Iscroll JS https://github.com/cubiq/iscroll/blob/master/LICENSE  [The MIT License (MIT)] Copyright (c) 2008-2013 Matteo Spinelli, http://cubiq.org
 * Slick Slider https://github.com/kenwheeler/slick/blob/master/LICENSE [The MIT License (MIT)]
 * Font-Awesome https://github.com/FortAwesome/Font-Awesome FontAwesome 4.6.3 Copyright 2012 Dave Gandy Font License: SIL OFL 1.1 Code License: MIT License http://fontawesome.io/license/
 
 == Screenshot Images [CCO License] ==
-Image for theme screenshot, Copyright unknown camera
+Image for theme screenshot
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/661074
 
-Image for theme screenshot, Copyright unknown camera
+Image for theme screenshot
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/552598
 
-Image for theme screenshot, Copyright unknown camera
+Image for theme screenshot, Copyright Tmaximumge
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/1608796
 
-Image for theme screenshot, Copyright DSLR-A580
+Image for theme screenshot
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/341841
 
-Image for theme screenshot, Copyright unknown camera
+Image for theme screenshot, Copyright Robert Couse-Baker
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/526052
 
-Image for theme screenshot, Copyright NIKON D3
+Image for theme screenshot
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/962915
 
-Image for theme screenshot, Copyright E-M1MarkII
+Image for theme screenshot, Copyright marcello migliosi
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/1614801
 

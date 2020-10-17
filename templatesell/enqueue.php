@@ -56,9 +56,9 @@ function intimate_scripts() {
     $max_num_pages = $wp_query->max_num_pages;
 
     wp_localize_script( 'intimate-custom', 'intimate_ajax', array(
-        'ajaxurl' => admin_url( 'admin-ajax.php' ),
-        'paged'     => $paged,
-        'max_num_pages'      => $max_num_pages,
+        'ajaxurl' => esc_url(admin_url( 'admin-ajax.php' )),
+        'paged'     => absint($paged),
+        'max_num_pages'      => absint($max_num_pages),
         'next_posts'      => next_posts( $max_num_pages, false ),
         'show_more'      => __( 'View More', 'intimate' ),
         'no_more_posts'        => __( 'No More', 'intimate' ),

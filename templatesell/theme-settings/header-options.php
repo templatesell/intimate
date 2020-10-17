@@ -67,7 +67,7 @@ $wp_customize->add_control( 'intimate_options[intimate_enable_header_ads]', arra
 if ( !function_exists('intimate_header_ads_active_callback') ) :
   function intimate_header_ads_active_callback(){
       global $intimate_theme_options;
-      $enable_header = absint($intimate_theme_options['intimate_enable_header_ads']);
+      $enable_header = absint($intimate_theme_options['intimate_enable_header_ads'])? absint($intimate_theme_options['intimate_enable_header_ads']): 0;
       if( 1 == $enable_header ){
           return true;
       }

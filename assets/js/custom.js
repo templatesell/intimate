@@ -1,9 +1,7 @@
 /* Custom JS File */
-
 (function($) {
 
 	"use strict";
-
 
 	jQuery(document).ready(function() {
 
@@ -87,7 +85,6 @@
 			    }
 			]
     	});
-
 
     	// Card Post Slider JS
     	$('.card__post__slider').slick({
@@ -228,10 +225,7 @@
 					scrollTop:0
 				},"slow");
 			});
-	  	}
-
-	  
-		
+	  	}		
 
         //slider widget
 	     $('.post-slider-section').slick({
@@ -263,32 +257,6 @@
 			$("#"+tab_id).addClass('current');
 		})
 
-
-	    // Change tab class and display content
-		//$('#tab_first a').on('click', function (event) {
-		//     event.preventDefault();
-		//     $('.tab-active').removeClass('tab-active');
-		//     $(this).parent().addClass('tab-active');
-		//     $('.tab-content_1>div').hide();
-		//     $($(this).attr('href')).show();
-		// });
-
-		// $('#tab_first a:first').trigger('click'); // Default
-
-		// Change tab class and display content
-		// $('#tab_second a').on('click', function (event) {
-		//     event.preventDefault();
-		//     $('.tab-active').removeClass('tab-active');
-		//     $(this).parent().addClass('tab-active');
-		//     $('.tab-content_2>div').hide();
-		//     $($(this).attr('href')).show();
-		// });
-
-		// $('#tab_second a:first').trigger('click'); // Default
-
-		// $('.closebtn').on('click', function(){
-		// 	t.close();
- 	// 	});
  	}); 
 	//Loading
  	jQuery(window).load(function() {

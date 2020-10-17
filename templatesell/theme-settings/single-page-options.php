@@ -69,7 +69,7 @@ if (!function_exists('intimate_related_post_callback')) :
     function intimate_related_post_callback()
     {
         global $intimate_theme_options;
-        $related_posts = absint($intimate_theme_options['intimate-single-page-related-posts']);
+        $related_posts = absint($intimate_theme_options['intimate-single-page-related-posts'])? absint($intimate_theme_options['intimate-single-page-related-posts']): 0;
         if (1 == $related_posts) {
             return true;
         } else {
