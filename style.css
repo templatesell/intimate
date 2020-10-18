@@ -39,7 +39,6 @@ body {
     font-weight: normal;
     line-height: 1.5;
     color: #4c4f53;
-    position: relative;
     text-rendering: optimizelegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -7958,7 +7957,7 @@ div#intimate-breadcrumbs {
     background: #fff !important;
     font-size: 20px;
     text-align: center;
-    top: 20px;
+    top: 46px;
     right: 320px;
     left: auto;
     z-index: 9999;

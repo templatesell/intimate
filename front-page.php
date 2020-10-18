@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-    <section id="content" class="site-content">
+<section id="content" class="site-content">
     <div class="container-fluid">
         <div class="row">
             <div id="primary" class="col-lg-9 col-md-7 col-sm-12 content-area">
@@ -29,7 +29,7 @@ get_header();
                 do_action('intimate_action_front_page');
                 ?>
             </main><!-- #main -->
-        </div><!-- #primary -->
+            </div><!-- #primary -->
 
         <aside id="secondary" class="col-lg-3 col-md-5 col-sm-12 widget-area side-right">
             <?php get_sidebar(); ?>
