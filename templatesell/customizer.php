@@ -30,7 +30,7 @@ if ( !function_exists('intimate_default_theme_options_values') ) :
            /*Header Options*/
             'intimate_enable_offcanvas'  => 1,
             'intimate_enable_search'  => 0,
-            'intimate_enable_header_ads'=> 1,
+            'intimate_enable_header_ads'=> 0,
             'intimate-header-ads-image'=>'',
             'intimate-header-ads-image-link'=>'',
             'intimate_enable_trending_news_big'=> 1,
