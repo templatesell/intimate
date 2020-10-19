@@ -38,7 +38,6 @@ if (!class_exists('Intimate_Tabbed')) :
 
         function widget($args, $instance)
         {
-            $instance = wp_parse_args( (array) $instance, $this->defaults() );
 
             $title = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title'], $instance, $this->id_base);
             
