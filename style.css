@@ -48,11 +48,7 @@ body {
 /* links */
 a {
     text-decoration: none !important;
-    color: #4c4f53;
-    -webkit-transition: color 0.2s ease, background-color 0.2s ease;
-    -moz-transition: color 0.2s ease, background-color 0.2s ease;
-    -o-transition: color 0.2s ease, background-color 0.2s ease;
-    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #4c4f53;;
 }
 a:focus {
     color: #4c4f53;
@@ -6148,6 +6144,7 @@ ul.social-menu li a[href*="dribble.com"]:before {
 .footer-wrap .widget{
     margin-bottom: 20px;
     padding:0;
+    color: #fff;
 }
 .footer-wrap .widget-title,
 .footer-wrap .widget{
@@ -6238,7 +6235,7 @@ div[class*="footer-col-"]:last-child {
     color: rgb(51, 51, 51);
 }
 .copyright{
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.3;
     padding: 15px 0;
     text-align: left;
@@ -6289,7 +6286,7 @@ div[class*="footer-col-"]:last-child {
 .footer-menu li a {
     display: inline-block;
     padding: 0 10px;
-    font-size: 15px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     color: #fff;
