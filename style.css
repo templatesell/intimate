@@ -27,7 +27,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1.0 - General styles (body, headings, links, tags, margins, etc.)
  * -------------------------------------------------------------
  */
-html, body {
+html, body { 
     margin: 0;
     padding: 0;
 }
