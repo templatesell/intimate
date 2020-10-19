@@ -31,6 +31,10 @@ Intimate includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.2 - October 19 2020 =
+* Fixed reviwer issues
+* Fixed some minor CSS issues
+
 = 1.0.1 - October 02 2020 =
 * Fixed some CSS issues
 * Fixed responsive issues
@@ -52,11 +56,11 @@ Intimate is distributed under the terms of the GNU GPL v2 or later.
 * Font-Awesome https://github.com/FortAwesome/Font-Awesome FontAwesome 4.6.3 Copyright 2012 Dave Gandy Font License: SIL OFL 1.1 Code License: MIT License http://fontawesome.io/license/
 
 == Screenshot Images [CCO License] ==
-Image for theme screenshot
+Image for theme screenshot Copyright Pxhere
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/661074
 
-Image for theme screenshot
+Image for theme screenshot Copyright Pxhere
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/552598
 
@@ -64,7 +68,7 @@ Image for theme screenshot, Copyright Tmaximumge
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/1608796
 
-Image for theme screenshot
+Image for theme screenshot Copyright Pxhere
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/341841
 
@@ -72,7 +76,7 @@ Image for theme screenshot, Copyright Robert Couse-Baker
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/526052
 
-Image for theme screenshot
+Image for theme screenshot Copyright Pxhere
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://pxhere.com/en/photo/962915
 
