@@ -16,7 +16,7 @@ if ( !function_exists('intimate_default_theme_options_values') ) :
             'intimate-logo-position'=>'left-logo',
 
             /*Top Header*/
-            'intimate_enable_top_header'=> 0, 
+            'intimate_enable_top_header'=> 1, 
             'intimate_enable_top_header_social'=> 0,
             'intimate_enable_top_trending'=> 1,
             'intimate_enable_top_date'=> 1,
