@@ -12,6 +12,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-big-trending-cate
       $args = array(
 			'posts_per_page' => 9,
 			'cat' => $trending_id,
+      'ignore_sticky_posts' => true,
 			'post_type' => 'post'
 		);
 ?>	

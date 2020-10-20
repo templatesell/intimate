@@ -27,6 +27,7 @@ if( $promo_cat > 0 && is_home() )
                     $args = array(
                         'cat' => $promo_cat ,
                         'posts_per_page' => 5,
+                        'ignore_sticky_posts' => true,
                     );
                     
                     $query = new WP_Query($args);

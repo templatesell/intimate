@@ -16,6 +16,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
 			'posts_per_page' => 3,
 			'paged' => 1,
 			'cat' => $slide_id,
+      'ignore_sticky_posts' => true,
 			'post_type' => 'post'
 		);
 		$slider_query = new WP_Query($args);
@@ -64,6 +65,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
               $r_args = array(
               'posts_per_page' => 2,
               'cat' => $slide_right_id,
+              'ignore_sticky_posts' => true,
               'post_type' => 'post'
             );
             $slider_r_query = new WP_Query($r_args);
@@ -137,6 +139,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                       $t_args = array(
                         'post_type' => 'post',
                         'posts_per_page'=> 4,
+                        'ignore_sticky_posts' => true,
                     );
                     // the query
                     $t_the_query = new WP_Query( $t_args ); 
@@ -186,7 +189,8 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                       $p_args = array(
                         'post_type' => 'post',
                         'posts_per_page'=> 4,
-                        'orderby' => 'comment_count',                    
+                        'orderby' => 'comment_count', 
+                        'ignore_sticky_posts' => true,                   
                     );
                     // the query
                     $p_the_query = new WP_Query( $p_args ); 
@@ -237,6 +241,7 @@ $trending_id = absint($intimate_theme_options['intimate-select-category-trending
                         'post_type' => 'post',
                         'posts_per_page'=> 4,
                         'cat'=> $trending_id,
+                        'ignore_sticky_posts' => true,
                     );
                     // the query
                     $t_the_query = new WP_Query( $t_args ); 
