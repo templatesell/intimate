@@ -31,6 +31,10 @@ Intimate includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.4 - October 20 2020 =
+* Added upgrade notice
+* Added Upgrade to pro button
+
 = 1.0.3 - October 19 2020 =
 * Fixed reviwer issues
 * Added about page
