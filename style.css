@@ -1759,6 +1759,105 @@ div#MobileMenu {
     font-family: 'Roboto', sans-serif;
 }
 
+.canvas-btn{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    position: relative;
+}
+.canvas-btn span {
+    height: 3px;
+    display: block;
+    left: 0;
+    width: 20px;
+    line-height: 1;
+    position: absolute;
+    background-color: #000000;
+    transition: all 0.2s ease-in-out;
+}
+.canvas-btn span:after {
+    position: absolute;
+    background: #333;
+    content: "";
+    height: 3px;
+    left: -8px;
+    top: 0;
+    width: 5px;
+}
+.canvas-btn span:nth-child(1) {
+    top: 0px;
+}
+.canvas-btn span:nth-child(2) {
+    top: 9px;
+}
+.canvas-btn span:nth-child(3) {
+    bottom: 0px;
+}
+
+
+.offcanvas__wrapper {
+    display: block;
+    position: relative;
+}
+
+.canvas-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.canvas-header.activate {
+    opacity: 1;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.5);
+}
+.close-btn{
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 3px 0 0 3px;
+    background: #fff !important;
+    font-size: 20px;
+    text-align: center;
+    top: 46px;
+    right: 320px;
+    left: auto;
+    z-index: 9999;
+}
+.canvas-header-block {
+    position: fixed;
+    right: -340px;
+    width: 340px;
+    background: #fff;
+    height: 100%;
+    padding: 50px 30px;
+    padding-top: 80px;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: scroll;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+.canvas-header.activate .canvas-header-block {
+    right: -20px;
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /*==============================================================
 ## Header Type CSS
@@ -1817,8 +1916,9 @@ div#MobileMenu {
 .header-image .mobile-menu span{
     background: #fff;
 }
+.header-image .canvas-btn span:after,
 .header-image .canvas-btn span{
-    background-color: #fff;
+    background: #fff;
 }
 @media (max-width: 991px) {
     .header-1 .header-image .canvas-btn ul{
@@ -4573,8 +4673,7 @@ article{
 .widget_categories ul li {
     color: #989ea6;
     margin-bottom: 10px;
-    display: table;
-    text-align: right;
+    text-align: left;
     width: 100%;
 }
 .widget_categories ul li:last-child {
@@ -4582,7 +4681,6 @@ article{
 }
 .widget_categories ul li a {
     margin-right: 4px;
-    display: table-cell;
     text-align: left;
 }
 .widget_categories ul ul {
@@ -6156,7 +6254,11 @@ ul.social-menu li a[href*="dribble.com"]:before {
 }
 .footer-wrap .card__post__title h5 a,
 .footer-wrap .widget a{
-    color: #fff;
+    color: #fff!important;
+}
+.footer-wrap .card__post__title h5 a:hover,
+.footer-wrap .widget a:hover{
+    opacity: 0.9;
 }
 .footer-wrap h3{
     font-size: 16px;
@@ -7881,101 +7983,3 @@ div#intimate-breadcrumbs {
     font-family: sans-serif;
 }
 
-.canvas-btn{
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    width: 25px;
-    height: 20px;
-    position: relative;
-}
-.canvas-btn span {
-    height: 3px;
-    display: block;
-    left: 0;
-    width: 20px;
-    line-height: 1;
-    position: absolute;
-    background-color: #000000;
-    transition: all 0.2s ease-in-out;
-}
-.canvas-btn span:after {
-    position: absolute;
-    background: #333;
-    content: "";
-    height: 3px;
-    left: -8px;
-    top: 0;
-    width: 5px;
-}
-.canvas-btn span:nth-child(1) {
-    top: 0px;
-}
-.canvas-btn span:nth-child(2) {
-    top: 9px;
-}
-.canvas-btn span:nth-child(3) {
-    bottom: 0px;
-}
-
-
-.offcanvas__wrapper {
-    display: block;
-    position: relative;
-}
-
-.canvas-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 1);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    transition: 0.5s ease;
-}
-
-.canvas-header.activate {
-    opacity: 1;
-    visibility: visible;
-    background: rgba(0, 0, 0, 0.5);
-}
-.close-btn{
-    height: 35px;
-    width: 35px;
-    line-height: 35px;
-    border-radius: 3px 0 0 3px;
-    background: #fff !important;
-    font-size: 20px;
-    text-align: center;
-    top: 46px;
-    right: 320px;
-    left: auto;
-    z-index: 9999;
-}
-.canvas-header-block {
-    position: fixed;
-    right: -340px;
-    width: 340px;
-    background: #fff;
-    height: 100%;
-    padding: 50px 30px;
-    padding-top: 80px;
-    opacity: 0;
-    visibility: hidden;
-    overflow-y: scroll;
-    -webkit-transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    transition: 0.5s ease;
-}
-.canvas-header.activate .canvas-header-block {
-    right: -20px;
-    opacity: 1;
-    visibility: visible;
-}
