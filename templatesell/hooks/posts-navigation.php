@@ -25,7 +25,7 @@ if (!function_exists('intimate_posts_navigation')) :
                 'prev_text' => __('<i class="fa fa-angle-left"></i>', 'intimate'),
                 'next_text' => __('<i class="fa fa-angle-right"></i>', 'intimate'),
             ));
-            echo "<div>";
+            echo "</div>";
         } elseif ('ajax' == $intimate_pagination_option) {
             $page_number = get_query_var('paged');
             if ($page_number == 0) {
