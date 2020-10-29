@@ -135,7 +135,7 @@ $wp_customize->add_control( 'intimate_options[intimate_enable_trending_news_big]
 if ( !function_exists('intimate_trending_active_callback') ) :
   function intimate_trending_active_callback(){
       global $intimate_theme_options;
-      $enable_trending = absint($intimate_theme_options['intimate_enable_trending_news_big']);
+      $enable_trending = absint($intimate_theme_options['intimate_enable_trending_news_big'])? absint($intimate_theme_options['intimate_enable_trending_news_big']): 0;
       if( 1 == $enable_trending ){
           return true;
       }
