@@ -137,6 +137,9 @@ if ( ! function_exists( 'intimate_setup' ) ) :
         add_image_size('intimate-related-size', 600, 400, true); 
         add_image_size('intimate-promo-post', 800, 500, true); 
         add_image_size('intimate-related-post-thumbnails', 850, 550, true ); 
+
+        // Add support for Yoast SEO Breadcrumbs.
+        add_theme_support( 'yoast-seo-breadcrumbs' );
 	}
 endif;
 add_action( 'after_setup_theme', 'intimate_setup' );

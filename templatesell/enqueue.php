@@ -7,9 +7,9 @@ function intimate_scripts() {
 	/*google font  */
 	global $intimate_theme_options;
     /*body  */
-    wp_enqueue_style('intimate-body', '//fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&display=swap', array(), null);
+    wp_enqueue_style('intimate-body', '//fonts.googleapis.com/css2?family=Muli:400,400i,500,600,700&display=swap', array(), null);
     /*heading  */
-    wp_enqueue_style('intimate-heading', '//fonts.googleapis.com/css?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,500;1,700&display=swap', array(), null);
+    wp_enqueue_style('intimate-heading', '//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,500;1,700&display=swap', array(), null);
     /*Author signature google font  */
     wp_enqueue_style('intimate-sign', '//fonts.googleapis.com/css?family=Monsieur+La+Doulaise&display=swap', array(), null);
     

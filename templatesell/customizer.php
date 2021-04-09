@@ -89,6 +89,7 @@ if ( !function_exists('intimate_default_theme_options_values') ) :
 
             /*Miscellaneous Options*/
             'intimate-front-page-content'=> 1,
+            'intimate-breadcrumb-selection-option'=> 'theme-breadcrumb',
 
         );
 return apply_filters( 'intimate_default_theme_options_values', $default_theme_options );
@@ -137,9 +138,8 @@ function intimate_customize_register( $wp_customize ) {
      ) );
   }
   $default = intimate_default_theme_options_values();
-
+  $GLOBALS['intimate_theme_options'] = intimate_get_options_value();
   require get_template_directory() . '/templatesell/theme-settings/theme-settings.php';
-
   require get_template_directory() . '/templatesell/theme-settings/front-page-options.php';
 
   /*Getting Home Page Widget Area on Main Panel*/

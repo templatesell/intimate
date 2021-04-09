@@ -1,10 +1,11 @@
 === Intimate ===
 
 Contributors: templatesell
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog, news
+Tags: grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, block-patterns, block-styles, custom-background, custom-logo, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, threaded-comments, translation-ready, footer-widgets, custom-colors, custom-header, editor-style, rtl-language-support, sticky-post, theme-options, wide-blocks, blog, news, photography
+
 Requires at least: 4.5
 Requires PHP: 4.7
-Tested up to: 5.5
+Tested up to: 5.7
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -31,6 +32,12 @@ Intimate includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.6 - April 09 2021 =
+* Tested with WP 5.7
+* Tags updated
+* Plugin compatibility for breadcrumbs added
+* Fixed font url
+
 = 1.0.6 - October 29 2020 =
 * Fixed customizer callback issues
 
