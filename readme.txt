@@ -32,7 +32,7 @@ Intimate includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
-= 1.0.6 - April 09 2021 =
+= 1.0.7 - April 09 2021 =
 * Tested with WP 5.7
 * Tags updated
 * Plugin compatibility for breadcrumbs added
