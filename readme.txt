@@ -5,7 +5,7 @@ Tags: grid-layout, one-column, two-columns, three-columns, four-columns, left-si
 
 Requires at least: 4.5
 Requires PHP: 4.7
-Tested up to: 5.7
+Tested up to: 5.8
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,6 +32,10 @@ Intimate includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.8 - August 19 2021 =
+* Tested with WP 5.8
+* Disable new widget screen
+
 = 1.0.7 - April 09 2021 =
 * Tested with WP 5.7
 * Tags updated

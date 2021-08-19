@@ -140,6 +140,12 @@ if ( ! function_exists( 'intimate_setup' ) ) :
 
         // Add support for Yoast SEO Breadcrumbs.
         add_theme_support( 'yoast-seo-breadcrumbs' );
+
+        /**
+        * Disable new widget screen
+        * @link https://developer.wordpress.org/block-editor/how-to-guides/widgets/overview/
+        */
+		remove_theme_support( 'widgets-block-editor' ); 
 	}
 endif;
 add_action( 'after_setup_theme', 'intimate_setup' );
