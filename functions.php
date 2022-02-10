@@ -16,6 +16,8 @@ if ( ! function_exists( 'intimate_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function intimate_setup() {
+		// Load customizer 
+		$GLOBALS['intimate_theme_options'] = intimate_get_options_value();
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -141,11 +143,10 @@ if ( ! function_exists( 'intimate_setup' ) ) :
         // Add support for Yoast SEO Breadcrumbs.
         add_theme_support( 'yoast-seo-breadcrumbs' );
 
-        /**
-        * Disable new widget screen
-        * @link https://developer.wordpress.org/block-editor/how-to-guides/widgets/overview/
-        */
-		remove_theme_support( 'widgets-block-editor' ); 
+		/**
+		 * Register theme support for Rank Math breadcrumbs
+		 */
+		add_theme_support( 'rank-math-breadcrumbs' );
 	}
 endif;
 add_action( 'after_setup_theme', 'intimate_setup' );

@@ -8,7 +8,6 @@
  *
  * @package Intimate
  */
-$GLOBALS['intimate_theme_options'] = intimate_get_options_value();
 global $intimate_theme_options;
 $enable_slider = absint($intimate_theme_options['intimate_enable_slider']);
 $enable_box = $intimate_theme_options['intimate_enable_promo'];

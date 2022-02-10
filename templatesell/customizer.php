@@ -82,7 +82,7 @@ if ( !function_exists('intimate_default_theme_options_values') ) :
             'intimate-enable-sticky-sidebar' => 1,
 
             /*Footer Section*/
-            'intimate-footer-copyright'  => esc_html__('Copyright All Rights Reserved 2020','intimate'),
+            'intimate-footer-copyright'  => esc_html__('Copyright All Rights Reserved 2022','intimate'),
 
             /*Breadcrumb Options*/
             'intimate-extra-breadcrumb' => 1,

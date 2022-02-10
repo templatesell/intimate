@@ -32,6 +32,11 @@ Intimate includes support for Infinite Scroll in Jetpack.
 * Custom pagination for numeric is made.
 
 == Changelog ==
+= 1.0.9 - February 10 2022 =
+* Tested with WP 5.9
+* Fixed widget blocks screen
+* Added theme support for Rank Math plugin
+
 = 1.0.8 - August 19 2021 =
 * Tested with WP 5.8
 * Disable new widget screen
